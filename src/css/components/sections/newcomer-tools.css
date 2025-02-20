@@ -1,0 +1,123 @@
+.newcomer-tools {
+    padding: 200px 0 200px;
+}
+
+.newcomer-tools__inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.newcomer-tools__title {
+    font-size: 50px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 30px;
+}
+
+.newcomer-tools__text {
+    font-size: 18px;
+    max-width: 400px;
+    margin-bottom: 50px;
+}
+
+.newcomer-tools__button {
+    max-width: 198px;
+    height: 58px;
+    padding: 12px 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: #FF6E30;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid #484F53;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.newcomer-tools__cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 600px;
+    gap: 50px 24px;
+    /* FireFox */
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+/* Скрытие для Chrome, Safari и Opera */
+.newcomer-tools__cards::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+.newcomer-tools__cards .card__wrapper {
+    max-width: 288px;
+    padding: 28px 22px;
+}
+
+@media screen and (min-width: 1000px) {
+    .newcomer-tools__button:hover {
+        color: #FFFFFF;
+        background-color: #FF6E30;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .newcomer-tools__inner {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .newcomer-tools__header {
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    .newcomer-tools__text {
+        margin: 0 auto 50px;
+    }
+
+    .newcomer-tools__button {
+        margin: 0 auto;
+    }
+
+    .newcomer-tools__button:active {
+        color: #FFFFFF;
+        background-color: #FF6E30;
+    }
+
+    .newcomer-tools__cards {
+        max-width: 100%;
+        gap: 30px;
+    }
+
+    .newcomer-tools__cards .card__wrapper {
+        padding: 22px 10px;
+    }
+}
+
+@media screen and (max-width: 635px) {
+    .newcomer-tools {
+        padding: 100px 0;
+    }
+
+    .newcomer-tools__cards {
+        justify-content: start;
+        flex-wrap: nowrap;
+        padding: 0 20px 10px 0;
+        overflow-x: scroll;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .newcomer-tools__title {
+        font-size: 30px;
+    }
+
+    .newcomer-tools__text {
+        font-size: 15px;
+    }
+}

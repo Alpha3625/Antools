@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Lora:wght@500&amp;family=Poppins:wght@400;500;600&amp;family=Roboto&amp;display=swap&_v=20220204162059">
+    <link href="src/css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/@splidejs/splide/dist/css/splide.min.css">
+    <link rel="shortcut icon" href="./src/assets/icons/antools.ico">
+    <title>Antools</title>
+    <script src="https://kit.fontawesome.com/53da206c2b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a class="logo" href="#">
+                    <img src="./src/assets/icons/antools.svg" alt="Antools">
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a class="nav__link" href="#">Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="drop-list nav__link" href="#">
+                                Categories <img class="nav__link-arrow" src="./src/assets/icons/arrow-down.svg" alt="">
+                            </a>
+                            <ul class="nav__category">
+                                <li class="nav__category-item">
+                                    <a class="nav__link" href="#">Design</a>
+                                </li>
+                                <li class="nav__category-item">
+                                    <a class="nav__link" href="#">Development</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="#">My Collections</a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="#">Blog</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__buttons">
+                    <button class="header__login" type="submit">Login</button>
+                    <button class="header__sign-up" type="submit">Sign Up</button>
+                </div>
+                <div class="burger-menu">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <div class="overlay"></div>
+    </header>
+    <main>
+        <section class="home">
+            <div class="container">
+                <div class="home__inner">
+                    <div class="home__content">
+                        <h1 class="home__title">
+                            Awesome tools for
+                            Designer & Developer<span>.</span>
+                        </h1>
+                        <p class="home__text">
+                            Antool is a web collection of information on paid or free Design and Development tools
+                        </p>
+                        <form class="search-container">
+                            <div class="search-input">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <input type="search" name="search-input" placeholder="find more than 430 + tools..."
+                                    required>
+                            </div>
+                            <button class="input-button" name="search-button" type="submit">Search</button>
+                        </form>
+                        <div class="home__icon">
+                            <i class="fa-brands fa-facebook-f"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                        </div>
+                    </div>
+                    <div class="home__bg">
+                        <img src="./src/assets/images/Illustration.png" alt="Illustration">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="popular-tools" id="home">
+            <div class="container">
+                <div class="popular-tools__header">
+                    <h2 class="popular-tools__title">Most Popular Tools</h2>
+                    <p class="popular-tools__text">
+                        Tools for the best Designers and Developers
+                        most popularly used in the world
+                    </p>
+                </div>
+                <div class="popular-tools__cards">
+                    <div class="card">
+                        <div class="card__wrapper">
+                            <div class="card__header">
+                                <h3>
+                                    <img class="card__logo" src="./src/assets/icons/figma.svg" width="60px"
+                                        height="60px" alt="Figma">
+                                    FIGMA
+                                </h3>
+                                <p>Free</p>
+                            </div>
+                            <div class="card__content">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </div>
+                            <div class="card__footer">
+                                <div class="card__icon">
+                                    <i class="fa-solid fa-heart"></i>
+                                    <i class="fa-solid fa-folder-plus"></i>
+                                </div>
+                                <button class="card__button button">Visit</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card__wrapper">
+                            <div class="card__header">
+                                <h3>
+                                    <img class="card__logo" src="./src/assets/icons/sketch.svg" width="60px"
+                                        height="60px" alt="Sketch">
+                                    Sketch
+                                </h3>
+                                <p>Trial & Paid</p>
+                            </div>
+                            <div class="card__content">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </div>
+                            <div class="card__footer">
+                                <div class="card__icon">
+                                    <i class="fa-solid fa-heart"></i>
+                                    <i class="fa-solid fa-folder-plus"></i>
+                                </div>
+                                <button class="card__button button">Visit</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card__wrapper">
+                            <div class="shadow"></div>
+                            <div class="card__header">
+                                <h3>
+                                    <img class="card__logo" src="./src/assets/icons/visual-studio-code.svg" width="60px"
+                                        height="60px" alt="Visual Studio Code">
+                                    Visual Studio Code
+                                </h3>
+                                <p>Free</p>
+                            </div>
+                            <div class="card__content">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </div>
+                            <div class="card__footer">
+                                <div class="card__icon">
+                                    <i class="fa-solid fa-heart"></i>
+                                    <i class="fa-solid fa-folder-plus"></i>
+                                </div>
+                                <button class="card__button button">Visit</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card__wrapper">
+                            <div class="card__header">
+                                <h3>
+                                    <img class="card__logo" src="./src/assets/icons/notion.svg" width="60px"
+                                        height="60px" alt="Notion">
+                                    Notion
+                                </h3>
+                                <p>Free & Paid</p>
+                            </div>
+                            <div class="card__content">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </div>
+                            <div class="card__footer">
+                                <div class="card__icon">
+                                    <i class="fa-solid fa-heart"></i>
+                                    <i class="fa-solid fa-folder-plus"></i>
+                                </div>
+                                <button class="card__button button">Visit</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card__wrapper">
+                            <div class="card__header">
+                                <h3>
+                                    <img class="card__logo" src="./src/assets/icons/slack.svg" width="60px"
+                                        height="60px" alt="Slack">
+                                    Slack
+                                </h3>
+                                <p>Free & Paid</p>
+                            </div>
+                            <div class="card__content">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </div>
+                            <div class="card__footer">
+                                <div class="card__icon">
+                                    <i class="fa-solid fa-heart"></i>
+                                    <i class="fa-solid fa-folder-plus"></i>
+                                </div>
+                                <button class="card__button button">Visit</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card__wrapper">
+                            <div class="card__header">
+                                <h3>
+                                    <img class="card__logo" src="./src/assets/icons/invision.svg" width="60px"
+                                        height="60px" alt="Invision">
+                                    Invision
+                                </h3>
+                                <p>Free & Paid</p>
+                            </div>
+                            <div class="card__content">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </div>
+                            <div class="card__footer">
+                                <div class="card__icon">
+                                    <i class="fa-solid fa-heart"></i>
+                                    <i class="fa-solid fa-folder-plus"></i>
+                                </div>
+                                <button class="card__button">Visit</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a class="popular-tools__button" href="#">Load more</a>
+            </div>
+        </section>
+
+        <div class="partners">
+            <div class="container">
+                <div class="partners__inner">
+                    <h2 class="partners__title">Trusted more than 150+ brand</h2>
+                    <ul class="partners__list">
+                        <li class="partners__item">
+                            <img src="./src/assets/icons/microsoft.svg" alt="Microsoft">
+                        </li>
+                        <li class="partners__item">
+                            <img src="./src/assets/icons/google.svg" alt="Google">
+                        </li>
+                        <li class="partners__item">
+                            <img src="./src/assets/icons/slack-gray.svg" alt="Slack">
+                        </li>
+                        <li class="partners__item">
+                            <img src="./src/assets/icons/wordpress.svg" alt="Wordpress">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <section class="newcomer-tools">
+            <div class="container">
+                <div class="newcomer-tools__inner">
+                    <div class="newcomer-tools__header">
+                        <h2 class="newcomer-tools__title">Newcomer Tools</h2>
+                        <p class="newcomer-tools__text">
+                            Wow! see the latest update of the most recommended
+                            tools from reliable designers and developers
+                        </p>
+                        <a class="newcomer-tools__button" href="#">Explore more</a>
+                    </div>
+                    <div class="newcomer-tools__cards">
+                        <div class="newcomer-tools__card card">
+                            <div class="card__wrapper">
+                                <div class="card__header">
+                                    <h3>
+                                        <img class="card__logo" src="./src/assets/icons/zeplin.svg" width="60px"
+                                            height="60px" alt="Zeplin">
+                                        Zeplin
+                                    </h3>
+                                    <p>Free & Paid</p>
+                                </div>
+                                <div class="card__content">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </div>
+                                <div class="card__footer">
+                                    <div class="card__icon">
+                                        <i class="fa-solid fa-heart"></i>
+                                        <i class="fa-solid fa-folder-plus"></i>
+                                    </div>
+                                    <a class="card__button" href="#">Visit</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="newcomer-tools__card card">
+                            <div class="card__wrapper">
+                                <div class="card__header">
+                                    <h3>
+                                        <img class="card__logo" src="./src/assets/icons/phpstorm.svg" width="60px"
+                                            height="60px" alt="PHPStorm">
+                                        PHPStorm
+                                    </h3>
+                                    <p>Free</p>
+                                </div>
+                                <div class="card__content">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </div>
+                                <div class="card__footer">
+                                    <div class="card__icon">
+                                        <i class="fa-solid fa-heart"></i>
+                                        <i class="fa-solid fa-folder-plus"></i>
+                                    </div>
+                                    <a class="card__button" href="#">Visit</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="newcomer-tools__card card">
+                            <div class="card__wrapper">
+                                <div class="card__header">
+                                    <h3>
+                                        <img class="card__logo" src="./src/assets/icons/toolbox.svg" width="60px"
+                                            height="60px" alt="Toolbox">
+                                        Toolbox
+                                    </h3>
+                                    <p>Free</p>
+                                </div>
+                                <div class="card__content">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </div>
+                                <div class="card__footer">
+                                    <div class="card__icon">
+                                        <i class="fa-solid fa-heart"></i>
+                                        <i class="fa-solid fa-folder-plus"></i>
+                                    </div>
+                                    <a class="card__button" href="#">Visit</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="newcomer-tools__card card">
+                            <div class="card__wrapper">
+                                <div class="card__header">
+                                    <h3>
+                                        <img class="card__logo" src="./src/assets/icons/procreate.svg" width="60px"
+                                            height="60px" alt="Procreate">
+                                        Procreate
+                                    </h3>
+                                    <p>Paid</p>
+                                </div>
+                                <div class="card__content">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </div>
+                                <div class="card__footer">
+                                    <div class="card__icon">
+                                        <i class="fa-solid fa-heart"></i>
+                                        <i class="fa-solid fa-folder-plus"></i>
+                                    </div>
+                                    <a class="card__button" href="#">Visit</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="main-carousel" class="splide">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <div class="splide__slide-inner">
+                            <div class="splide__slide-item slider-img">
+                                <img src="./src/assets/images/Ronald-Richards.png" alt="Ronald Richards">
+                                <img class="spiral" src="./src/assets/images/spiral.png" alt="spiral">
+
+                                <div class="personal-info">
+                                    <h3>Ronald Richards</h3>
+                                    <p>Product Manager</p>
+                                </div>
+                            </div>
+
+                            <div class="splide__slide-item">
+                                <div class="splide__slide-text">
+                                    <img class="quote" src="./src/assets/images/quote.png" alt="quote">
+                                    <p>
+                                        Incididunt cillum do sint sint enim ullamco id deserunt mollit qui
+                                        reprehenderit do. Do nulla
+                                        velit labore occaecat do deserunt
+                                        Lorem magna officia incididunt consectetur amet. Sunt consectetur veniam
+                                        minim ex commodo
+                                        sint non. Occaecat aute officia excepteur non laboris id qui ad.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="splide__slide-inner">
+                            <div class="splide__slide-item splide__slide-img">
+                                <img src="./src/assets/images/Maria-Clark.png" alt="Maria Clark">
+                                <img class="spiral" src="./src/assets/images/spiral.png" alt="spiral">
+
+                                <div class="personal-info">
+                                    <h3>Maria Clark</h3>
+                                    <p>Product Manager</p>
+                                </div>
+                            </div>
+
+                            <div class="splide__slide-item">
+                                <div class="splide__slide-text">
+                                    <img class="quote" src="./src/assets/images/quote.png" alt="quote">
+                                    <p>
+                                        Incididunt cillum do sint sint enim ullamco id deserunt mollit qui reprehenderit
+                                        do.
+                                        Velit ex tempor cillum ad sint occaecat. Do nulla velit labore occaecat do
+                                        deserunt
+                                        Lorem magna officia incididunt consectetur amet. Sunt consectetur veniam minim
+                                        ex
+                                        commodo sint non. Occaecat aute officia excepteur non laboris id qui ad.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="splide__slide-inner">
+                            <div class="splide__slide-item splide__slide-img">
+                                <img src="./src/assets/images/Amber-Brown.png" alt="Amber Brown">
+                                <img class="spiral" src="./src/assets/images/spiral.png" alt="spiral">
+
+                                <div class="personal-info">
+                                    <h3>Amber Brown</h3>
+                                    <p>Product Manager</p>
+                                </div>
+                            </div>
+
+                            <div class="splide__slide-item">
+                                <div class="splide__slide-text">
+                                    <img class="quote" src="./src/assets/images/quote.png" alt="quote">
+                                    <p>
+                                        Incididunt cillum do sint sint enim ullamco id deserunt mollit qui reprehenderit
+                                        do.
+                                        Velit ex tempor cillum ad sint occaecat. Do nulla velit labore occaecat do
+                                        deserunt
+                                        Lorem magna officia incididunt consectetur amet. Sunt consectetur veniam minim
+                                        ex commodo
+                                        sint non.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="cooperation">
+            <div class="container">
+                <div class="cooperation__header">
+                    <h2 class="cooperation__title">Become a contributor?</h2>
+                    <p class="cooperation__text">
+                        Join us and get tips & tricks to become a great Designer and Developer
+                    </p>
+                </div>
+                <form class="email-container">
+                    <input type="email" name="email-input" placeholder="Enter your email..." required>
+                    <button class="input-button" type="submit" name="input-button">Join Us</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__item">
+                    <div class="footer__logo">
+                        <img src="./src/assets/icons/antools.svg" alt="Antools">
+                    </div>
+                    <p class="copyright">Copyright 2021. Antools</p>
+                    <p class="footer__item-text">
+                        Antool is a web collection of information on paid or free Design and Development tools
+                    </p>
+                </div>
+
+                <div class="footer__item">
+                    <h4 class="footer__item-title">Contact Us</h4>
+                    <p class="footer__item-text">+621987463</p>
+                    <p class="footer__item-text">M Building, No.10 A</p>
+                    <p class="footer__item-text">antools@awesome.com</p>
+                </div>
+
+                <div class="footer__item">
+                    <h4 class="footer__item-title">Categories</h4>
+                    <a class="footer__item-text" href="#">Design</a>
+                    <a class="footer__item-text" href="#">Development</a>
+                </div>
+
+                <div class="footer__item">
+                    <h4 class="footer__item-title">Company Info</h4>
+                    <a class="footer__item-text" href="#">About Us</a>
+                    <a class="footer__item-text" href="#">Our Partners</a>
+                    <a class="footer__item-text" href="#">Blog</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
+    <script type="module" src="./src/js/script.js"></script>
+</body>
+
+</html>

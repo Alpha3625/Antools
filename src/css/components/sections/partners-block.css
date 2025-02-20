@@ -1,0 +1,37 @@
+.partners__inner {
+  width: 100%;
+  background: linear-gradient(315deg, rgb(33, 40, 47) 0%, rgb(33, 40, 47) 90%, rgba(76,47,51,1) 96%);
+  border: 2px solid #333A3F;
+  border-radius: 25px;
+  padding: 63px 0 55px;
+}
+
+.partners__title {
+  text-align: center;
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: 0.05rem;
+  margin-bottom: 65px;
+}
+
+.partners__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px 123px;
+  padding: 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .partners__inner {
+    padding: 30px 0;
+  }
+  
+  .partners__title {
+    margin-bottom: 50px;
+  }
+  
+  .partners__list {
+    gap: 50px;
+  }
+}

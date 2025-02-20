@@ -1,0 +1,49 @@
+.cooperation {
+  padding: 200px 0;
+}
+
+.cooperation__header {
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.cooperation__title {
+  font-size: 50px;
+  font-weight: 100;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 25px;
+}
+
+.cooperation__text {
+  font-size: 18px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 635px) {
+  .cooperation {
+    padding: 0 0 100px;
+  }
+  
+  .cooperation__header {
+    margin-bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .cooperation {
+    padding-bottom: 150px;
+  }
+  
+  .cooperation__header {
+    margin-bottom: 50px;
+  }
+
+  .cooperation__title {
+    font-size: 30px;
+  }
+
+  .cooperation__text {
+    font-size: 15px;
+  }
+}
