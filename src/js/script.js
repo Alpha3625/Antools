@@ -1,6 +1,6 @@
-import { initBurgerMenu } from "./components/burgerMenu.js";
-import { initDropList } from "./components/dropList.js";
-import { initSplide } from "./components/splide.js";
+import { initBurgerMenu } from "./burgerMenu.js";
+import { initDropList } from "./dropList.js";
+import { initSplide } from "./splide.js";
 
 document.addEventListener('DOMContentLoaded', function() {
   initBurgerMenu();
