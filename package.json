@@ -1,5 +1,43 @@
 {
+  "name": "antools",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "start": "webpack-dev-server --open",
+    "build-prod": "webpack --node-env=production && rimraf dist/*.LICENSE.txt",
+    "deploy": "gh-pages -d dist"
+  },
+  "keywords": [],
+  "author": "Karasu",
+  "license": "ISC",
+  "browserslist": [
+    "defaults",
+    "not dead",
+    "not op_mini all"
+  ],
+  "homepage": "https://alpha3625.github.io/Antools/",
+  "description": "",
   "dependencies": {
-    "@splidejs/splide": "^4.1.4"
+    "@babel/polyfill": "^7.12.1",
+    "@splidejs/splide": "^4.1.4",
+    "image-webpack-loader": "^8.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.9",
+    "@babel/preset-env": "^7.26.9",
+    "babel-loader": "^9.2.1",
+    "css-loader": "^7.1.2",
+    "gh-pages": "^6.3.0",
+    "html-loader": "^5.1.0",
+    "html-webpack-plugin": "^5.6.3",
+    "mini-css-extract-plugin": "^2.9.2",
+    "postcss": "^8.5.3",
+    "postcss-loader": "^8.1.1",
+    "postcss-preset-env": "^10.1.4",
+    "rimraf": "^6.0.1",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0"
   }
 }

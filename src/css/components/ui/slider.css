@@ -1,3 +1,9 @@
+/* .splide {
+  width: 100%;
+  max-width: 1224px !important;
+  margin: 0 auto;
+} */
+
 .splide__slide {
   padding: 0 25px;
   text-align: center;
@@ -21,6 +27,7 @@
   line-height: 2;
   width: 100%;
   max-width: 640px;
+  /* max-width: 393px; */
 }
 
 .quote {
@@ -95,11 +102,14 @@
   right: 10% !important;
 }
 
+.splide__pagination {
+  gap: 18px !important;
+}
+
 .splide__pagination__page {
   height: 6px !important;
   width: 44px !important;
-  margin: 0 2px !important;
-  background-color: #283036 !important;
+  background-color: #364047 !important;
   border-radius: 10px !important;
   transform: scale(1) !important;
 }
@@ -175,6 +185,10 @@
   .splide__arrow {
     background: rgba(0, 0, 0, 0.8) !important;
   }
+
+  .splide__pagination {
+    top: 101%;
+  }
 }
 
 @media screen and (max-width: 320px) {
@@ -197,6 +211,6 @@
   }
 
   .splide__pagination {
-    top: 100%;
+    gap: 8px !important;
   }
 }

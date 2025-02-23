@@ -1,0 +1,78 @@
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    background-color: #283036;
+    border: 1px solid #333A3F;
+    border-radius: 15px;
+    position: relative;
+}
+
+.input-button {
+    width: 100%;
+    max-width: 118px;
+    height: 48px;
+    color: #FFFFFF;
+    font-size: 16px;
+    background-color: #FF6E30;
+    border: 1px solid #FF6E30;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: all .3s linear;
+}
+
+.input-button:hover {
+    background-color: #d44d13;
+}
+
+.search-container {
+    max-width: 480px;
+    padding: 7px 5px 7px 15px;
+    margin-bottom: 120px;
+}
+
+.search-input {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+}
+
+.search-input>input {
+    width: 100%;
+    height: 40px;
+    color: #ADB0B1;
+}
+
+.email-container {
+    max-width: 520px;
+    padding: 7px 5px 7px 10px;
+    margin: 0 auto;
+}
+
+.email-container>input {
+    width: 100%;
+    height: 40px;
+    vertical-align: middle;
+    background: transparent;
+    color: #ADB0B1;
+}
+
+@media screen and (max-width: 500px) {
+
+    .search-container,
+    .email-container {
+        padding: 7px 10px;
+    }
+
+    .input-button {
+        max-width: 100%;
+        margin: 0 auto;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        left: 0;
+    }
+}
