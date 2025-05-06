@@ -9177,62 +9177,33 @@ var splide_min_default = /*#__PURE__*/__webpack_require__.n(splide_min);
 
 
 
-const slider1 = new (splide_min_default())("#slider1", {
+const baseOptions = {
   type: 'loop',
   perPage: 1,
   autoplay: true,
   interval: 10000,
+}
+
+const carouselTools = {
+  ...baseOptions,
   gap: '20px',
   breakpoints: {
-    650: {
-      padding: '15%',
-    },
+    767: { padding: '25%' },
+    570: { padding: '21%' },
+    500: { padding: '18%' },
+    450: { padding: '14%' },
+    400: { padding: '12%' },
+    375: { padding: '0%' },
+  },
+}
 
-    394: {
-      padding: '12%',
-    },
+const carouselBlog = {
+  ...baseOptions,
+}
 
-    375: {
-      padding: '10%',
-    },
-
-    320: {
-      padding: '0%',
-    }
-  }
-}).mount();
-
-const slider2 = new (splide_min_default())("#slider2", {
-  type: 'loop',
-  perPage: 1,
-  autoplay: true,
-  interval: 10000,
-  gap: '20px',
-  breakpoints: {
-    650: {
-      padding: '15%',
-    },
-
-    394: {
-      padding: '12%',
-    },
-
-    375: {
-      padding: '10%',
-    },
-
-    320: {
-      padding: '0%',
-    }
-  }
-}).mount();
-
-const slider3 = new (splide_min_default())('#blog', {
-  type: 'loop',
-  perPage: 1,
-  autoplay: true,
-  interval: 10000,
-}).mount();
+const slider1 = new (splide_min_default())("#slider1", carouselTools).mount();
+const slider2 = new (splide_min_default())("#slider2", carouselTools).mount();
+const slider3 = new (splide_min_default())('#blog', carouselBlog).mount();
 ;// ./src/js/index.js
 
 
