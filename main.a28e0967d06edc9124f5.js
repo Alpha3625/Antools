@@ -9016,9 +9016,44 @@ module.exports = {
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript && document.currentScript.tagName.toUpperCase() === 'SCRIPT')
+/******/ 				scriptUrl = document.currentScript.src;
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) {
+/******/ 					var i = scripts.length - 1;
+/******/ 					while (i > -1 && (!scriptUrl || !/^http(s?):/.test(scriptUrl))) scriptUrl = scripts[i--].src;
+/******/ 				}
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/^blob:/, "").replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
 /******/ 	})();
 /******/ 	
 /************************************************************************/
@@ -9060,18 +9095,8 @@ var ___HTML_LOADER_IMPORT_9___ = (/* unused pure expression or super */ null && 
 var ___HTML_LOADER_IMPORT_10___ = (/* unused pure expression or super */ null && (/* unused asset import */ undefined));
 var ___HTML_LOADER_IMPORT_11___ = (/* unused pure expression or super */ null && (/* unused asset import */ undefined));
 var ___HTML_LOADER_IMPORT_12___ = (/* unused pure expression or super */ null && (/* unused asset import */ undefined));
-var ___HTML_LOADER_IMPORT_13___ = (/* unused pure expression or super */ null && (/* unused asset import */ undefined));
-var ___HTML_LOADER_IMPORT_14___ = (/* unused pure expression or super */ null && (/* unused asset import */ undefined));
-var ___HTML_LOADER_IMPORT_15___ = (/* unused pure expression or super */ null && (/* unused asset import */ undefined));
-var ___HTML_LOADER_IMPORT_16___ = (/* unused pure expression or super */ null && (/* unused asset import */ undefined));
-var ___HTML_LOADER_IMPORT_17___ = (/* unused pure expression or super */ null && (/* unused asset import */ undefined));
-var ___HTML_LOADER_IMPORT_18___ = (/* unused pure expression or super */ null && (/* unused asset import */ undefined));
-var ___HTML_LOADER_IMPORT_19___ = (/* unused pure expression or super */ null && (/* unused asset import */ undefined));
-var ___HTML_LOADER_IMPORT_20___ = (/* unused pure expression or super */ null && (/* unused asset import */ undefined));
-var ___HTML_LOADER_IMPORT_21___ = (/* unused pure expression or super */ null && (/* unused asset import */ undefined));
-var ___HTML_LOADER_IMPORT_22___ = (/* unused pure expression or super */ null && (/* unused asset import */ undefined));
 // Module
-var code = (/* unused pure expression or super */ null && (`<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width,initial-scale=1"> <meta http-equiv="X-UA-Compatible" content="ie=edge"> <meta property="og:title" content="Antools"> <link rel="shortcut icon" href="${___HTML_LOADER_IMPORT_0___}"> <title>Antools</title> </head> <body> <header class="header"> <div class="container"> <div class="header__inner"> <a class="logo" href="#home"> <img src="${___HTML_LOADER_IMPORT_1___}" alt="Antools"> </a> <nav class="nav"> <ul class="nav__list"> <li class="nav__item"> <a class="nav__link" href="#home">Home</a> </li> <li class="nav__item"> <div class="nav__сategories-link nav__link"> Categories <svg class="nav__link-arrow" width="12" height="6"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-arrow-down"></use> </svg> </div> <ul class="nav__сategories"> <li class="nav__сategories-item"> <a class="nav__link" href="#design">Design</a> </li> <li class="nav__сategories-item"> <a class="nav__link" href="#development">Development</a> </li> </ul> </li> <li class="nav__item"> <a class="nav__link" href="#collections">My Collections</a> </li> <li class="nav__item"> <a class="nav__link" href="#blog">Blog</a> </li> </ul> </nav> <div class="header__buttons"> <button class="header__login" type="submit">Login</button> <button class="header__sign-up" type="submit">Sign Up</button> </div> <div class="burger-menu"> <span></span> </div> </div> </div> </header> <main> <div class="overlay"></div> <section class="home" id="home"> <div class="container"> <div class="home__inner"> <div class="home__content"> <h1 class="home__title"> Awesome tools for Designer & Developer<span>.</span> </h1> <p class="home__text"> Antool is a web collection of information on paid or free Design and Development tools </p> <form class="input-container search-container"> <div class="search-input"> <svg width="25" height="24"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-search"></use> </svg> <input type="search" name="search-input" placeholder="find more than 430 + tools..." required> </div> <button class="input-button" name="search-button" type="submit">Search</button> </form> <div class="home__icon"> <svg width="36" height="36"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-facebook"></use> </svg> <svg width="36" height="36"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-instagram"></use> </svg> <svg width="36" height="36"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-twitter"></use> </svg> </div> </div> <div class="home__bg"> <img src="${___HTML_LOADER_IMPORT_3___}" alt="Illustration"> </div> </div> </div> </section> <section class="popular-tools"> <div class="container"> <div class="popular-tools__header" id="design"> <h2 class="popular-tools__title">Most Popular Tools</h2> <p class="popular-tools__text"> Tools for the best Designers and Developers most popularly used in the world </p> </div> <div class="popular-tools__cards"> <div class="card"> <div class="card__wrapper"> <div class="card__header"> <h3> <img class="card__logo" src="${___HTML_LOADER_IMPORT_4___}" width="60px" height="60px" alt="Figma"> FIGMA </h3> <p>Free</p> </div> <div class="card__content"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div> <div class="card__footer"> <div class="card__icons"> <div class="card__icon"> <svg width="28" height="28"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-heart"/> </svg> </div> <div class="card__icon"> <svg width="30" height="30"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-folder"/> </svg> </div> </div> <button class="card__button button">Visit</button> </div> </div> </div> <div class="card"> <div class="card__wrapper"> <div class="card__header"> <h3> <img class="card__logo" src="${___HTML_LOADER_IMPORT_5___}" width="60px" height="60px" alt="Sketch"> Sketch </h3> <p>Trial & Paid</p> </div> <div class="card__content"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div> <div class="card__footer"> <div class="card__icons"> <div class="card__icon"> <svg width="28" height="28"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-heart"/> </svg> </div> <div class="card__icon"> <svg width="30" height="30"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-folder"/> </svg> </div> </div> <button class="card__button button">Visit</button> </div> </div> </div> <div class="card"> <div class="card__wrapper"> <div class="shadow"></div> <div class="card__header"> <h3> <img class="card__logo" src="${___HTML_LOADER_IMPORT_6___}" width="60px" height="60px" alt="Visual Studio Code"> Visual Studio Code </h3> <p>Free</p> </div> <div class="card__content"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div> <div class="card__footer"> <div class="card__icons"> <div class="card__icon"> <svg width="28" height="28"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-heart"/> </svg> </div> <div class="card__icon"> <svg width="30" height="30"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-folder"/> </svg> </div> </div> <button class="card__button button">Visit</button> </div> </div> </div> <div class="card"> <div class="card__wrapper"> <div class="card__header"> <h3> <img class="card__logo" src="${___HTML_LOADER_IMPORT_7___}" width="60px" height="60px" alt="Notion"> Notion </h3> <p>Free & Paid</p> </div> <div class="card__content"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div> <div class="card__footer"> <div class="card__icons"> <div class="card__icon"> <svg width="28" height="28"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-heart"/> </svg> </div> <div class="card__icon"> <svg width="30" height="30"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-folder"/> </svg> </div> </div> <button class="card__button button">Visit</button> </div> </div> </div> <div class="card"> <div class="card__wrapper"> <div class="card__header"> <h3> <img class="card__logo" src="${___HTML_LOADER_IMPORT_8___}" width="60px" height="60px" alt="Slack"> Slack </h3> <p>Free & Paid</p> </div> <div class="card__content"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div> <div class="card__footer"> <div class="card__icons"> <div class="card__icon"> <svg width="28" height="28"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-heart"/> </svg> </div> <div class="card__icon"> <svg width="30" height="30"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-folder"/> </svg> </div> </div> <button class="card__button button">Visit</button> </div> </div> </div> <div class="card"> <div class="card__wrapper"> <div class="card__header"> <h3> <img class="card__logo" src="${___HTML_LOADER_IMPORT_9___}" width="60px" height="60px" alt="Invision"> Invision </h3> <p>Free & Paid</p> </div> <div class="card__content"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div> <div class="card__footer"> <div class="card__icons"> <div class="card__icon"> <svg width="28" height="28"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-heart"/> </svg> </div> <div class="card__icon"> <svg width="30" height="30"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-folder"/> </svg> </div> </div> <button class="card__button">Visit</button> </div> </div> </div> </div> <a class="popular-tools__button" href="#">Load more</a> </div> <div id="slider1" class="splide"> <div class="splide__track"> <ul class="splide__list"> <li class="splide__slide"> <div class="card"> <div class="card__wrapper"> <div class="card__header"> <h3> <img class="card__logo" src="${___HTML_LOADER_IMPORT_4___}" width="60px" height="60px" alt="Figma"> FIGMA </h3> <p>Free</p> </div> <div class="card__content"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div> <div class="card__footer"> <div class="card__icons"> <div class="card__icon"> <svg width="28" height="28"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-heart"/> </svg> </div> <div class="card__icon"> <svg width="30" height="30"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-folder"/> </svg> </div> </div> <button class="card__button button">Visit</button> </div> </div> </div> </li> <li class="splide__slide"> <div class="card"> <div class="card__wrapper"> <div class="card__header"> <h3> <img class="card__logo" src="${___HTML_LOADER_IMPORT_5___}" width="60px" height="60px" alt="Sketch"> Sketch </h3> <p>Trial & Paid</p> </div> <div class="card__content"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div> <div class="card__footer"> <div class="card__icons"> <div class="card__icon"> <svg width="28" height="28"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-heart"/> </svg> </div> <div class="card__icon"> <svg width="30" height="30"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-folder"/> </svg> </div> </div> <button class="card__button button">Visit</button> </div> </div> </div> </li> <li class="splide__slide"> <div class="card"> <div class="card__wrapper"> <div class="shadow"></div> <div class="card__header"> <h3> <img class="card__logo" src="${___HTML_LOADER_IMPORT_6___}" width="60px" height="60px" alt="Visual Studio Code"> Visual Studio Code </h3> <p>Free</p> </div> <div class="card__content"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div> <div class="card__footer"> <div class="card__icons"> <div class="card__icon"> <svg width="28" height="28"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-heart"/> </svg> </div> <div class="card__icon"> <svg width="30" height="30"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-folder"/> </svg> </div> </div> <button class="card__button button">Visit</button> </div> </div> </div> </li> <li class="splide__slide"> <div class="card"> <div class="card__wrapper"> <div class="card__header"> <h3> <img class="card__logo" src="${___HTML_LOADER_IMPORT_7___}" width="60px" height="60px" alt="Notion"> Notion </h3> <p>Free & Paid</p> </div> <div class="card__content"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div> <div class="card__footer"> <div class="card__icons"> <div class="card__icon"> <svg width="28" height="28"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-heart"/> </svg> </div> <div class="card__icon"> <svg width="30" height="30"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-folder"/> </svg> </div> </div> <button class="card__button button">Visit</button> </div> </div> </div> </li> <li class="splide__slide"> <div class="card"> <div class="card__wrapper"> <div class="card__header"> <h3> <img class="card__logo" src="${___HTML_LOADER_IMPORT_8___}" width="60px" height="60px" alt="Slack"> Slack </h3> <p>Free & Paid</p> </div> <div class="card__content"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div> <div class="card__footer"> <div class="card__icons"> <div class="card__icon"> <svg width="28" height="28"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-heart"/> </svg> </div> <div class="card__icon"> <svg width="30" height="30"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-folder"/> </svg> </div> </div> <button class="card__button button">Visit</button> </div> </div> </div> </li> <li class="splide__slide"> <div class="card"> <div class="card__wrapper"> <div class="card__header"> <h3> <img class="card__logo" src="${___HTML_LOADER_IMPORT_9___}" width="60px" height="60px" alt="Invision"> Invision </h3> <p>Free & Paid</p> </div> <div class="card__content"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div> <div class="card__footer"> <div class="card__icons"> <div class="card__icon"> <svg width="28" height="28"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-heart"/> </svg> </div> <div class="card__icon"> <svg width="30" height="30"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-folder"/> </svg> </div> </div> <button class="card__button">Visit</button> </div> </div> </div> </li> </ul> </div> </div> </section> <section> <div class="partners"> <div class="container"> <div class="partners__inner"> <h2 class="partners__title">Trusted more than 150+ brand</h2> <ul class="partners__list"> <li class="partners__item"> <img src="${___HTML_LOADER_IMPORT_10___}" alt="Microsoft"> </li> <li class="partners__item"> <img src="${___HTML_LOADER_IMPORT_11___}" alt="Google"> </li> <li class="partners__item"> <img src="${___HTML_LOADER_IMPORT_12___}" alt="Slack"> </li> <li class="partners__item"> <img src="${___HTML_LOADER_IMPORT_13___}" alt="Wordpress"> </li> </ul> </div> </div> </div> </section> <section class="newcomer-tools" id="development"> <div class="container"> <div class="newcomer-tools__inner"> <div class="newcomer-tools__header"> <h2 class="newcomer-tools__title">Newcomer Tools</h2> <p class="newcomer-tools__text"> Wow! see the latest update of the most recommended tools from reliable designers and developers </p> <a class="newcomer-tools__button" href="#">Explore more</a> </div> <div class="newcomer-tools__cards"> <div class="newcomer-tools__card card"> <div class="card__wrapper"> <div class="card__header"> <h3> <img class="card__logo" src="${___HTML_LOADER_IMPORT_14___}" width="60px" height="60px" alt="Zeplin"> Zeplin </h3> <p>Free & Paid</p> </div> <div class="card__content"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div> <div class="card__footer"> <div class="card__icons"> <div class="card__icon"> <svg width="28" height="28"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-heart"/> </svg> </div> <div class="card__icon"> <svg width="30" height="30"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-folder"/> </svg> </div> </div> <a class="card__button" href="#">Visit</a> </div> </div> </div> <div class="newcomer-tools__card card"> <div class="card__wrapper"> <div class="card__header"> <h3> <img class="card__logo" src="${___HTML_LOADER_IMPORT_15___}" width="60px" height="60px" alt="PHPStorm"> PHPStorm </h3> <p>Free</p> </div> <div class="card__content"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div> <div class="card__footer"> <div class="card__icons"> <div class="card__icon"> <svg width="28" height="28"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-heart"/> </svg> </div> <div class="card__icon"> <svg width="30" height="30"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-folder"/> </svg> </div> </div> <a class="card__button" href="#">Visit</a> </div> </div> </div> <div class="newcomer-tools__card card"> <div class="card__wrapper"> <div class="card__header"> <h3> <img class="card__logo" src="${___HTML_LOADER_IMPORT_16___}" width="60px" height="60px" alt="Toolbox"> Toolbox </h3> <p>Free</p> </div> <div class="card__content"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div> <div class="card__footer"> <div class="card__icons"> <div class="card__icon"> <svg width="28" height="28"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-heart"/> </svg> </div> <div class="card__icon"> <svg width="30" height="30"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-folder"/> </svg> </div> </div> <a class="card__button" href="#">Visit</a> </div> </div> </div> <div class="newcomer-tools__card card"> <div class="card__wrapper"> <div class="card__header"> <h3> <img class="card__logo" src="${___HTML_LOADER_IMPORT_17___}" width="60px" height="60px" alt="Procreate"> Procreate </h3> <p>Paid</p> </div> <div class="card__content"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div> <div class="card__footer"> <div class="card__icons"> <div class="card__icon"> <svg width="28" height="28"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-heart"/> </svg> </div> <div class="card__icon"> <svg width="30" height="30"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-folder"/> </svg> </div> </div> <a class="card__button" href="#">Visit</a> </div> </div> </div> </div> </div> </div> <div id="slider2" class="splide"> <div class="splide__track"> <ul class="splide__list"> <li class="splide__slide"> <div class="newcomer-tools__card card"> <div class="card__wrapper"> <div class="card__header"> <h3> <img class="card__logo" src="${___HTML_LOADER_IMPORT_14___}" width="60px" height="60px" alt="Zeplin"> Zeplin </h3> <p>Free & Paid</p> </div> <div class="card__content"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div> <div class="card__footer"> <div class="card__icons"> <div class="card__icon"> <svg width="28" height="28"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-heart"/> </svg> </div> <div class="card__icon"> <svg width="30" height="30"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-folder"/> </svg> </div> </div> <a class="card__button" href="#">Visit</a> </div> </div> </div> </li> <li class="splide__slide"> <div class="newcomer-tools__card card"> <div class="card__wrapper"> <div class="card__header"> <h3> <img class="card__logo" src="${___HTML_LOADER_IMPORT_15___}" width="60px" height="60px" alt="Phpstorm"> Phpstorm </h3> <p>Free</p> </div> <div class="card__content"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div> <div class="card__footer"> <div class="card__icons"> <div class="card__icon"> <svg width="28" height="28"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-heart"/> </svg> </div> <div class="card__icon"> <svg width="30" height="30"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-folder"/> </svg> </div> </div> <a class="card__button" href="#">Visit</a> </div> </div> </div> </li> <li class="splide__slide"> <div class="newcomer-tools__card card"> <div class="card__wrapper"> <div class="card__header"> <h3> <img class="card__logo" src="${___HTML_LOADER_IMPORT_16___}" width="60px" height="60px" alt="Toolbox"> Toolbox </h3> <p>Free</p> </div> <div class="card__content"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div> <div class="card__footer"> <div class="card__icons"> <div class="card__icon"> <svg width="28" height="28"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-heart"/> </svg> </div> <div class="card__icon"> <svg width="30" height="30"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-folder"/> </svg> </div> </div> <a class="card__button" href="#">Visit</a> </div> </div> </div> </li> <li class="splide__slide"> <div class="newcomer-tools__card card"> <div class="card__wrapper"> <div class="card__header"> <h3> <img class="card__logo" src="${___HTML_LOADER_IMPORT_17___}" width="60px" height="60px" alt="Procreate"> Procreate </h3> <p>Paid</p> </div> <div class="card__content"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div> <div class="card__footer"> <div class="card__icons"> <div class="card__icon"> <svg width="28" height="28"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-heart"/> </svg> </div> <div class="card__icon"> <svg width="30" height="30"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-folder"/> </svg> </div> </div> <a class="card__button" href="#">Visit</a> </div> </div> </div> </li> </ul> </div> </div> </section> <section id="blog" class="splide"> <div class="splide__track"> <ul class="splide__list"> <li class="splide__slide"> <div class="splide__slide-inner"> <div class="splide__slide-item splide__slide-img"> <div class="person-img"> <img src="${___HTML_LOADER_IMPORT_18___}" alt="Ronald Richards"> </div> <img class="spiral" src="${___HTML_LOADER_IMPORT_19___}" alt="spiral"> <div class="personal-info"> <h3>Ronald Richards</h3> <p>Product Manager</p> </div> </div> <div class="splide__slide-item"> <div class="splide__slide-text"> <img class="quote" src="${___HTML_LOADER_IMPORT_20___}" alt="quote"> <p> Incididunt cillum do sint sint enim ullamco id deserunt mollit qui reprehenderit do. Do nulla velit labore occaecat do deserunt Lorem magna officia incididunt consectetur amet. Sunt consectetur veniam minim ex commodo sint non. Occaecat aute officia excepteur non laboris id qui ad. </p> </div> </div> </div> </li> <li class="splide__slide"> <div class="splide__slide-inner"> <div class="splide__slide-item splide__slide-img"> <div class="person-img"> <img src="${___HTML_LOADER_IMPORT_21___}" alt="Maria Clark"> </div> <img class="spiral" src="${___HTML_LOADER_IMPORT_19___}" alt="spiral"> <div class="personal-info"> <h3>Maria Clark</h3> <p>Product Manager</p> </div> </div> <div class="splide__slide-item"> <div class="splide__slide-text"> <img class="quote" src="${___HTML_LOADER_IMPORT_20___}" alt="quote"> <p> Incididunt cillum do sint sint enim ullamco id deserunt mollit qui reprehenderit do. Velit ex tempor cillum ad sint occaecat. Do nulla velit labore occaecat do deserunt Lorem magna officia incididunt consectetur amet. Sunt consectetur veniam minim ex commodo sint non. Occaecat aute officia excepteur non laboris id qui ad. </p> </div> </div> </div> </li> <li class="splide__slide"> <div class="splide__slide-inner"> <div class="splide__slide-item splide__slide-img"> <div class="person-img"> <img src="${___HTML_LOADER_IMPORT_22___}" alt="Amber Brown"> </div> <img class="spiral" src="${___HTML_LOADER_IMPORT_19___}" alt="spiral"> <div class="personal-info"> <h3>Amber Brown</h3> <p>Product Manager</p> </div> </div> <div class="splide__slide-item"> <div class="splide__slide-text"> <img class="quote" src="${___HTML_LOADER_IMPORT_20___}" alt="quote"> <p> Incididunt cillum do sint sint enim ullamco id deserunt mollit qui reprehenderit do. Velit ex tempor cillum ad sint occaecat. Do nulla velit labore occaecat do deserunt Lorem magna officia incididunt consectetur amet. Sunt consectetur veniam minim ex commodo sint non. </p> </div> </div> </div> </li> </ul> </div> </section> <section class="cooperation"> <div class="container"> <div class="cooperation__header"> <h2 class="cooperation__title">Become a contributor?</h2> <p class="cooperation__text"> Join us and get tips & tricks to become a great Designer and Developer </p> </div> <form class="input-container email-container"> <input type="email" name="email-input" placeholder="Enter your email..." required> <button class="input-button" type="submit" name="input-button">Join Us</button> </form> </div> </section> </main> <footer class="footer"> <div class="container"> <div class="footer__inner"> <div class="footer__item"> <div class="footer__logo"> <img src="${___HTML_LOADER_IMPORT_1___}" alt="Antools"> </div> <p class="copyright">Copyright 2021. Antools</p> <p class="footer__item-text"> Antool is a web collection of information on paid or free Design and Development tools </p> </div> <div class="footer__item"> <h4 class="footer__item-title">Contact Us</h4> <a class="footer__item-text" href="#">+621987463</a> <a class="footer__item-text" href="#">M Building, No.10 A</a> <a class="footer__item-text" href="#">antools@awesome.com</a> </div> <div class="footer__item"> <h4 class="footer__item-title">Categories</h4> <a class="footer__item-text" href="#">Design</a> <a class="footer__item-text" href="#">Development</a> </div> <div class="footer__item"> <h4 class="footer__item-title">Company Info</h4> <a class="footer__item-text" href="#">About Us</a> <a class="footer__item-text" href="#">Our Partners</a> <a class="footer__item-text" href="#">Blog</a> </div> </div> </div> </footer> </body> </html>`));
+var code = (/* unused pure expression or super */ null && (`<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width,initial-scale=1"> <meta http-equiv="X-UA-Compatible" content="ie=edge"> <meta property="og:title" content="Antools"> <link rel="shortcut icon" href="${___HTML_LOADER_IMPORT_0___}"> <title>Antools</title> </head> <body> <header class="header"> <div class="container"> <div class="header__inner"> <a class="logo" href="#home"> <img src="${___HTML_LOADER_IMPORT_1___}" alt="Antools"> </a> <nav class="nav"> <ul class="nav__list"> <li class="nav__item"> <a class="nav__link" href="#home">Home</a> </li> <li class="nav__item"> <div class="nav__сategories-link nav__link"> Categories <svg class="nav__link-arrow" width="12" height="6"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-arrow-down"></use> </svg> </div> <ul class="nav__сategories"> <li class="nav__сategories-item"> <a class="nav__link" href="#design">Design</a> </li> <li class="nav__сategories-item"> <a class="nav__link" href="#development">Development</a> </li> </ul> </li> <li class="nav__item"> <a class="nav__link" href="#collections">My Collections</a> </li> <li class="nav__item"> <a class="nav__link" href="#blog">Blog</a> </li> </ul> </nav> <div class="header__buttons"> <button class="header__login" type="submit">Login</button> <button class="header__sign-up" type="submit">Sign Up</button> </div> <div class="burger-menu"> <span></span> </div> </div> </div> </header> <main> <div class="overlay"></div> <section class="home" id="home"> <div class="container"> <div class="home__inner"> <div class="home__content"> <h1 class="home__title"> Awesome tools for Designer & Developer<span>.</span> </h1> <p class="home__text"> Antool is a web collection of information on paid or free Design and Development tools </p> <form class="input-container search-container"> <div class="search-input"> <svg width="25" height="24"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-search"></use> </svg> <input type="search" name="search-input" placeholder="find more than 430 + tools..." required> </div> <button class="input-button" name="search-button" type="submit">Search</button> </form> <div class="home__icon"> <svg width="36" height="36"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-facebook"></use> </svg> <svg width="36" height="36"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-instagram"></use> </svg> <svg width="36" height="36"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-twitter"></use> </svg> </div> </div> <div class="home__bg"> <img src="${___HTML_LOADER_IMPORT_3___}" alt="Illustration"> </div> </div> </div> </section> <section class="popular-tools"> <div class="container"> <div class="popular-tools__header" id="design"> <h2 class="popular-tools__title">Most Popular Tools</h2> <p class="popular-tools__text"> Tools for the best Designers and Developers most popularly used in the world </p> </div> <div id="slider1" class="splide"> <div class="splide__track"> <ul class="splide__list"></ul> </div> </div> <a class="popular-tools__button" href="#">Load more</a> </div> </section> <section> <div class="partners"> <div class="container"> <div class="partners__inner"> <h2 class="partners__title">Trusted more than 150+ brand</h2> <ul class="partners__list"> <li class="partners__item"> <img src="${___HTML_LOADER_IMPORT_4___}" alt="Microsoft"> </li> <li class="partners__item"> <img src="${___HTML_LOADER_IMPORT_5___}" alt="Google"> </li> <li class="partners__item"> <img src="${___HTML_LOADER_IMPORT_6___}" alt="Slack"> </li> <li class="partners__item"> <img src="${___HTML_LOADER_IMPORT_7___}" alt="Wordpress"> </li> </ul> </div> </div> </div> </section> <section class="newcomer-tools" id="development"> <div class="container"> <div class="newcomer-tools__inner"> <div class="newcomer-tools__header"> <h2 class="newcomer-tools__title">Newcomer Tools</h2> <p class="newcomer-tools__text"> Wow! see the latest update of the most recommended tools from reliable designers and developers </p> <a class="newcomer-tools__button" href="#">Explore more</a> </div> <div id="slider2" class="splide"> <div class="splide__track"> <ul class="splide__list newcomer-tools__cards"></ul> </div> </div> </div> </div> </section> <section id="blog" class="splide"> <div class="splide__track"> <ul class="splide__list"> <li class="splide__slide"> <div class="splide__slide-inner"> <div class="splide__slide-item splide__slide-img"> <div class="person-img"> <img src="${___HTML_LOADER_IMPORT_8___}" alt="Ronald Richards"> </div> <img class="spiral" src="${___HTML_LOADER_IMPORT_9___}" alt="spiral"> <div class="personal-info"> <h3>Ronald Richards</h3> <p>Product Manager</p> </div> </div> <div class="splide__slide-item"> <div class="splide__slide-text"> <img class="quote" src="${___HTML_LOADER_IMPORT_10___}" alt="quote"> <p> Incididunt cillum do sint sint enim ullamco id deserunt mollit qui reprehenderit do. Do nulla velit labore occaecat do deserunt Lorem magna officia incididunt consectetur amet. Sunt consectetur veniam minim ex commodo sint non. Occaecat aute officia excepteur non laboris id qui ad. </p> </div> </div> </div> </li> <li class="splide__slide"> <div class="splide__slide-inner"> <div class="splide__slide-item splide__slide-img"> <div class="person-img"> <img src="${___HTML_LOADER_IMPORT_11___}" alt="Maria Clark"> </div> <img class="spiral" src="${___HTML_LOADER_IMPORT_9___}" alt="spiral"> <div class="personal-info"> <h3>Maria Clark</h3> <p>Product Manager</p> </div> </div> <div class="splide__slide-item"> <div class="splide__slide-text"> <img class="quote" src="${___HTML_LOADER_IMPORT_10___}" alt="quote"> <p> Incididunt cillum do sint sint enim ullamco id deserunt mollit qui reprehenderit do. Velit ex tempor cillum ad sint occaecat. Do nulla velit labore occaecat do deserunt Lorem magna officia incididunt consectetur amet. Sunt consectetur veniam minim ex commodo sint non. Occaecat aute officia excepteur non laboris id qui ad. </p> </div> </div> </div> </li> <li class="splide__slide"> <div class="splide__slide-inner"> <div class="splide__slide-item splide__slide-img"> <div class="person-img"> <img src="${___HTML_LOADER_IMPORT_12___}" alt="Amber Brown"> </div> <img class="spiral" src="${___HTML_LOADER_IMPORT_9___}" alt="spiral"> <div class="personal-info"> <h3>Amber Brown</h3> <p>Product Manager</p> </div> </div> <div class="splide__slide-item"> <div class="splide__slide-text"> <img class="quote" src="${___HTML_LOADER_IMPORT_10___}" alt="quote"> <p> Incididunt cillum do sint sint enim ullamco id deserunt mollit qui reprehenderit do. Velit ex tempor cillum ad sint occaecat. Do nulla velit labore occaecat do deserunt Lorem magna officia incididunt consectetur amet. Sunt consectetur veniam minim ex commodo sint non. </p> </div> </div> </div> </li> </ul> </div> </section> <section class="cooperation"> <div class="container"> <div class="cooperation__header"> <h2 class="cooperation__title">Become a contributor?</h2> <p class="cooperation__text"> Join us and get tips & tricks to become a great Designer and Developer </p> </div> <form class="input-container email-container"> <input type="email" name="email-input" placeholder="Enter your email..." required> <button class="input-button" type="submit" name="email-button">Join Us</button> </form> </div> </section> </main> <footer class="footer"> <div class="container"> <div class="footer__inner"> <div class="footer__item"> <div class="footer__logo"> <img src="${___HTML_LOADER_IMPORT_1___}" alt="Antools"> </div> <p class="copyright">Copyright 2021. Antools</p> <p class="footer__item-text"> Antool is a web collection of information on paid or free Design and Development tools </p> </div> <div class="footer__item"> <h4 class="footer__item-title">Contact Us</h4> <a class="footer__item-text" href="#">+621987463</a> <a class="footer__item-text" href="#">M Building, No.10 A</a> <a class="footer__item-text" href="#">antools@awesome.com</a> </div> <div class="footer__item"> <h4 class="footer__item-title">Categories</h4> <a class="footer__item-text" href="#design">Design</a> <a class="footer__item-text" href="#development">Development</a> </div> <div class="footer__item"> <h4 class="footer__item-title">Company Info</h4> <a class="footer__item-text" href="#">About Us</a> <a class="footer__item-text" href="#">Our Partners</a> <a class="footer__item-text" href="#">Blog</a> </div> </div> </div> </footer> </body> </html>`));
 // Exports
 /* harmony default export */ const index = ((/* unused pure expression or super */ null && (code)));
 ;// ./src/js/scripts/header.js
@@ -9195,33 +9220,220 @@ var splide_min_default = /*#__PURE__*/__webpack_require__.n(splide_min);
 
 
 
-const baseOptions = {
-  type: 'loop',
-  perPage: 1,
-  autoplay: true,
-  interval: 10000,
-  drag: false,
-}
-
-const carouselTools = {
-  ...baseOptions,
-  gap: '20px',
-  breakpoints: {
-    767: { padding: '25%' },
-    570: { padding: '21%' },
-    500: { padding: '18%' },
-    450: { padding: '14%' },
-    400: { padding: '12%' },
-    375: { padding: '0%' },
+function initMobileSlider () {
+  const baseOptions = {
+    type: 'loop',
+    perPage: 1,
+    perMove: 1,
+    autoplay: true,
+    interval: 10000,
+    drag: false,
   }
-};
 
-const carouselBlog = {...baseOptions};
+  const carouselToolsOptions = {
+    ...baseOptions,
+    gap: '20px',
+    mediaQuery: 'min',
+    breakpoints: {
+      1024: { destroy: true },
+      767: { padding: '25%' },
+      570: { padding: '21%' },
+      500: { padding: '18%' },
+      450: { padding: '14%' },
+      400: { padding: '12%' },
+      375: { padding: '0%' },
+    }
+  };
 
-const slider1 = new (splide_min_default())("#slider1", carouselTools).mount();
-const slider2 = new (splide_min_default())("#slider2", carouselTools).mount();
-const slider3 = new (splide_min_default())('#blog', carouselBlog).mount();
+  const carouselBlogOptions = {...baseOptions};
+
+  new (splide_min_default())("#slider1", carouselToolsOptions).mount();
+  new (splide_min_default())("#slider2", carouselToolsOptions).mount();
+  new (splide_min_default())('#blog', carouselBlogOptions).mount();
+}
+;// ./src/assets/sprite.svg
+const sprite_namespaceObject = __webpack_require__.p + "sprite.svg";
+;// ./src/assets/icons/figma.svg
+const figma_namespaceObject = __webpack_require__.p + "assets/figma.svg";
+;// ./src/assets/icons/sketch.svg
+const sketch_namespaceObject = __webpack_require__.p + "assets/sketch.svg";
+;// ./src/assets/icons/visual-studio-code.svg
+const visual_studio_code_namespaceObject = __webpack_require__.p + "assets/visual-studio-code.svg";
+;// ./src/assets/icons/notion.svg
+const notion_namespaceObject = __webpack_require__.p + "assets/notion.svg";
+;// ./src/assets/icons/slack.svg
+const slack_namespaceObject = __webpack_require__.p + "assets/slack.svg";
+;// ./src/assets/icons/invision.svg
+const invision_namespaceObject = __webpack_require__.p + "assets/invision.svg";
+;// ./src/assets/icons/zeplin.svg
+const zeplin_namespaceObject = __webpack_require__.p + "assets/zeplin.svg";
+;// ./src/assets/icons/phpstorm.svg
+const phpstorm_namespaceObject = __webpack_require__.p + "assets/phpstorm.svg";
+;// ./src/assets/icons/toolbox.svg
+const toolbox_namespaceObject = __webpack_require__.p + "assets/toolbox.svg";
+;// ./src/assets/icons/procreate.svg
+const procreate_namespaceObject = __webpack_require__.p + "assets/procreate.svg";
+;// ./src/js/scripts/toolsData.js
+
+
+
+
+
+
+
+
+
+
+
+const mostPopularTools = [
+    {
+        logo: figma_namespaceObject,
+        title: 'Visual Studio Code',
+        price: 'Free',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    },
+    {
+        logo: sketch_namespaceObject,
+        title: 'Sketch',
+        price: 'Trial & Paid',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    },
+    {
+        logo: visual_studio_code_namespaceObject,
+        title: 'Visual Studio Code',
+        price: 'Free',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    },
+    {
+        logo: notion_namespaceObject,
+        title: 'Notion',
+        price: 'Free & Paid',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    },
+    {
+        logo: slack_namespaceObject,
+        title: 'Slack',
+        price: 'Free & Paid',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    },
+    {
+        logo: invision_namespaceObject,
+        title: 'Invision',
+        price: 'Free & Paid',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    },
+];
+
+
+const newcomerTools = [
+    {
+        logo: zeplin_namespaceObject,
+        title: "Zeplin",
+        price: "Free & Paid",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    },
+    {
+        logo: phpstorm_namespaceObject,
+        title: "PHPStorm",
+        price: "Free",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    },
+        {
+        logo: toolbox_namespaceObject,
+        title: "Toolbox",
+        price: "Free & Paid",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    },
+        {
+        logo: procreate_namespaceObject,
+        title: "Procreate",
+        price: "Paid",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    },
+];
+;// ./src/js/scripts/toolsList.js
+
+
+
+const carouselTools_1 = document.getElementById('slider1');
+const carouselTools_1__list = carouselTools_1.querySelector('.splide__list');
+
+mostPopularTools.forEach(tool => {
+    carouselTools_1__list.insertAdjacentHTML('beforeend', `
+    <li class="splide__slide">
+        <div class="card">
+            <div class="card__wrapper">
+                <div class="card__header">
+                    <h3>
+                        <img class="card__logo" src="${tool.logo}" width="60px" height="60px" alt="${tool.title}">
+                        ${tool.title}
+                    </h3>
+                    <p>${tool.price}</p>
+                </div>
+                <div class="card__content">
+                    ${tool.description}
+                </div>
+                <div class="card__footer">
+                    <div class="card__icons">
+                        <div class="card__icon">
+                            <svg width="28" height="28">
+                                <use xlink:href="${sprite_namespaceObject}#icon-heart" />
+                            </svg>
+                        </div>
+                        <div class="card__icon">
+                            <svg width="30" height="30">
+                                <use xlink:href="${sprite_namespaceObject}#icon-folder" />
+                            </svg>
+                        </div>
+                    </div>
+                    <button class="card__button button">Visit</button>
+                </div>
+            </div>
+        </div>
+    </li>`);
+});
+
+const carouselTools_2 = document.getElementById('slider2');
+const carouselTools_2__list = carouselTools_2.querySelector('.splide__list');
+
+newcomerTools.forEach(tool => {
+    carouselTools_2__list.insertAdjacentHTML('beforeend', `
+        <li class="splide__slide">
+            <div class="newcomer-tools__card card">
+                <div class="card__wrapper">
+                    <div class="card__header">
+                        <h3>
+                            <img class="card__logo" src=${tool.logo} width="60px"
+                                height="60px" alt=${tool.title}>
+                            Zeplin
+                        </h3>
+                        <p>${tool.price}</p>
+                    </div>
+                    <div class="card__content">
+                       ${tool.description}
+                    </div>
+                    <div class="card__footer">
+                        <div class="card__icons">
+                            <div class="card__icon">
+                                <svg width="28" height="28">
+                                    <use xlink:href="${sprite_namespaceObject}#icon-heart" />
+                                </svg>
+                            </div>
+                            <div class="card__icon">
+                                <svg width="30" height="30">
+                                    <use xlink:href="${sprite_namespaceObject}#icon-folder" />
+                                </svg>
+                            </div>
+                        </div>
+                        <a class="card__button" href="#">Visit</a>
+                    </div>
+                </div>
+            </div>
+        </li>
+    `);
+});
 ;// ./src/js/index.js
+
 
 
 
@@ -9233,9 +9445,8 @@ document.addEventListener('DOMContentLoaded', function() {
   initHeader();
   initBurgerMenu();
   initDropList();
-  slider1;
-  slider2;
-  slider3;
+  initMobileSlider();
+  // carouselTools_2;
 });
 
 })();
