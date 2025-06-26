@@ -1,13 +1,14 @@
 import "../../index.html";
 import  "../css/styles.css";
-import initAnimation from "./scripts/animation.js";
+import { initHeader } from "./scripts/header.js";
 import { initBurgerMenu } from "./scripts/burgerMenu.js";
 import { initDropList } from "./scripts/dropList.js";
-import { initSplide } from "./scripts/splide.js";
+import initMobileSlider from "./scripts/splide.js";
+import "./scripts/toolsList.js";
 
 document.addEventListener('DOMContentLoaded', function() {
-  initAnimation();
+  initHeader();
   initBurgerMenu();
   initDropList();
-  initSplide;
+  initMobileSlider();
 });

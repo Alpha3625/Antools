@@ -9,7 +9,7 @@
 
 .cooperation__title {
   font-size: 50px;
-  font-weight: 100;
+  font-weight: 500;
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 25px;
 }
@@ -20,17 +20,13 @@
   margin: 0 auto;
 }
 
-@media screen and (max-width: 635px) {
+@media screen and (max-width: 1024px) {
   .cooperation {
-    padding: 0 0 100px;
-  }
-  
-  .cooperation__header {
-    margin-bottom: 100px;
+    padding: 100px 0;
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .cooperation {
     padding-bottom: 150px;
   }

@@ -9,7 +9,7 @@
 
 .popular-tools__title {
   font-size: 50px;
-  font-weight: 100;
+  font-weight: 500;
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 34px;
 }
@@ -18,23 +18,6 @@
   font-size: 18px;
   max-width: 400px;
   margin: 0 auto;
-}
-
-.popular-tools__cards {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  /* gap: 100px 24px; */
-  margin-bottom: 100px;
-  /* FireFox */
-  scrollbar-width: thin;
-  scrollbar-color: transparent transparent;
-}
-
-/* Скрытие для Chrome, Safari и Opera */
-.popular-tools__cards::-webkit-scrollbar {
-  width: 0;
-  background: transparent;
 }
 
 .popular-tools__button {
@@ -57,30 +40,24 @@
   background-color: #FF6E30;
 }
 
-@media screen and (max-width: 1255px) {
-  .popular-tools__cards {
-    justify-content: center;
-    /* gap: 50px 24px; */
-  }
-}
+  /* .popular-tools  .card__wrapper {
+        max-width: 288px;
+        padding: 22px 10px;
+    } */
 
-@media screen and (max-width: 1000px) {
-  .popular-tools__cards {
-    gap: 24px;
-  }
-}
-
-@media screen and (max-width: 635px) {
+@media screen and (max-width: 1024px) {
   .popular-tools {
-    padding: 0 0 100px;
+    padding: 100px 0;
   }
 
-  .popular-tools__cards {
-    justify-content: start;
-    flex-wrap: nowrap;
-    padding: 0 20px 10px 0;
-    margin-bottom: 80px;
-    overflow-x: scroll;
+  .popular-tools>.container {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .popular-tools__header {
+    margin-bottom: 50px;
   }
 }
 

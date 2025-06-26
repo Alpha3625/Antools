@@ -10,6 +10,7 @@
 
 .newcomer-tools__title {
     font-size: 50px;
+    font-weight: 500;
     color: rgba(255, 255, 255, 0.8);
     margin-bottom: 30px;
 }
@@ -35,37 +36,47 @@
     transition: all 0.3s;
 }
 
-.newcomer-tools__cards {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
-    max-width: 600px;
-    gap: 50px 24px;
-    /* FireFox */
-    scrollbar-width: thin;
-    scrollbar-color: transparent transparent;
-}
-
-/* Скрытие для Chrome, Safari и Opera */
-.newcomer-tools__cards::-webkit-scrollbar {
-    width: 0;
-    background: transparent;
-}
-
-.newcomer-tools__cards .card__wrapper {
+.newcomer-tools__card .card__wrapper {
     max-width: 288px;
     padding: 28px 22px;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (max-width: 1076px) {
+    .newcomer-tools__inner {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .newcomer-tools__header {
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    .newcomer-tools__text {
+        margin: 0 auto 50px;
+    }
+
+    .newcomer-tools__button {
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 1024px) {
     .newcomer-tools__button:hover {
         color: #FFFFFF;
         background-color: #FF6E30;
     }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
+    .newcomer-tools {
+        padding: 100px 0;
+    }
+
+    .newcomer-tools>.container {
+        padding: 0;
+    }
+
     .newcomer-tools__inner {
         flex-direction: column;
         justify-content: center;
@@ -88,28 +99,6 @@
         color: #FFFFFF;
         background-color: #FF6E30;
     }
-
-    .newcomer-tools__cards {
-        max-width: 100%;
-        gap: 30px;
-    }
-
-    .newcomer-tools__cards .card__wrapper {
-        padding: 22px 10px;
-    }
-}
-
-@media screen and (max-width: 635px) {
-    .newcomer-tools {
-        padding: 100px 0;
-    }
-
-    .newcomer-tools__cards {
-        justify-content: start;
-        flex-wrap: nowrap;
-        padding: 0 20px 10px 0;
-        overflow-x: scroll;
-    }
 }
 
 @media screen and (max-width: 500px) {
@@ -119,5 +108,9 @@
 
     .newcomer-tools__text {
         font-size: 15px;
+    }
+
+    .newcomer-tools__card .card__wrapper {
+        padding: 22px 10px;
     }
 }

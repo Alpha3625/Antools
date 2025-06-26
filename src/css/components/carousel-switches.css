@@ -1,0 +1,42 @@
+/* Button */
+#slider1 .splide__arrow,
+#slider2 .splide__arrow {
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 0;
+    width: 20px;
+    height: 100px;
+}
+
+/* Button's icon */
+#slider1 .splide__arrow>svg,
+#slider2 .splide__arrow>svg {
+    fill: #FF6E30;
+    width: 20px;
+    height: 20px;
+}
+
+/* Prev button */
+#slider1 .splide__arrow--prev,
+#slider2 .splide__arrow--prev {
+    border-radius: 0 10px 10px 0;
+    left: 0;
+}
+
+/* Next button */
+#slider1 .splide__arrow--next,
+#slider2 .splide__arrow--next {
+    border-radius: 10px 0 0 10px;
+    right: 0;
+}
+
+/* Pagination */
+#slider1 .splide__pagination,
+#slider2 .splide__pagination {
+    bottom: -50px;
+    gap: 5px;
+}
+
+#slider1 .splide__pagination__page.is-active,
+#slider2 .splide__pagination__page.is-active {
+    background-color: #FF6E30;
+}

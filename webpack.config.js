@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 const mode = process.env.NODE_ENV || 'development';
 const devMode = mode === 'development';
@@ -23,13 +24,14 @@ module.exports = {
     filename: '[name].[contenthash].js',
     assetModuleFilename: 'assets/[name][ext]',
   },
+
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'index.html')
     }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css',
-    }),
+    })
   ],
   module: {
     rules: [{
@@ -45,7 +47,10 @@ module.exports = {
               loader: 'postcss-loader',
               options: {
                 postcssOptions: {
-                  plugins: [require('postcss-preset-env')],
+                  plugins: [
+                    require('postcss-preset-env'),
+                    'autoprefixer',
+                  ],
                 },
               },
             },
@@ -55,35 +60,37 @@ module.exports = {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'fonts/[name][ext]',
+          filename: 'assets/fonts/[name][ext]',
         },
       },
       {
-        test: /\.(jpe?g|png|webp|gif|svg)$/i,
-        use: devMode
-          ? []
-          : [{
-              loader: 'image-webpack-loader',
-              options: {
-                mozjpeg: {
-                  progressive: true,
-                },
-                optipng: {
-                  enabled: false,
-                },
-                pngquant: {
-                  quality: [0.65, 0.90],
-                  speed: 4
-                },
-                gifsicle: {
-                  interlaced: false,
-                },
-                webp: {
-                  quality: 75
-                }
-              }
-          }],
-        type: 'asset/resource',
+        oneOf: [
+          {
+            test: /sprite\.svg$|antools\.ico$/i,
+            type: 'asset/resource',
+            generator: {
+              filename: '[name][ext]',
+            },
+          },
+          {
+            test: /\.(jpe?g|png|webp|gif|svg)$/i,
+            use: devMode
+              ? []
+              : [{
+                  loader: 'image-webpack-loader',
+                  options: { mozjpeg: { progressive: true },
+                    optipng: { enabled: false },
+                    pngquant: { quality: [0.65, 0.90] },
+                    gifsicle: { interlaced: false },
+                    webp: { quality: 75 }
+                  }
+              }],
+            type: 'asset/resource',
+            generator: {
+              filename: 'assets/[name][ext]',
+            },
+          },
+        ],
       },
       {
         test: /\.m?js$/i,
@@ -92,12 +99,16 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             targets: "defaults",
-            presets: [
-              ['@babel/preset-env']
-            ]
-          }
-        }
-      }
+            presets: [['@babel/preset-env']]
+          },
+        },
+      },
     ],
   },
-}
+  optimization: {
+    minimize: !devMode,
+    minimizer: [
+      new CssMinimizerPlugin(),
+    ],
+  },
+};

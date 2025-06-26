@@ -1,12 +1,25 @@
-@import url(./common/reset.css);
-@import url(./common/base.css);
-@import url(./components/layouts/header.css);
-@import url(./components/sections/home.css);
-@import url(./components/ui/input.css);
-@import url(./components/sections/popular-tools.css);
-@import url(./components/sections/cooperation.css);
-@import url(./components/ui/card.css);
-@import url(./components/sections/partners-block.css);
-@import url(./components/sections/newcomer-tools.css);
-@import url(./components/ui/slider.css);
-@import url(./components/layouts/footer.css);
+@import "./base/fonts.css";
+@import "./base/reset.css";
+@import "./base/common.css";
+
+@import "./sections/home.css";
+@import "./sections/popular-tools.css";
+@import "./sections/cooperation.css";
+@import "./sections/partners-block.css";
+@import "./sections/newcomer-tools.css";
+
+@import "./components/header.css";
+@import "./components/nav.css";
+@import "./components/burger-menu.css";
+
+@import "./components/overlay.css";
+
+@import "./components/input.css";
+@import "./components/card.css";
+
+@import "./components/slider-blog.css";
+@import "./components/carousel-tools-1.css";
+@import "./components/carousel-tools-2.css";
+@import "./components/carousel-switches.css";
+
+@import "./components/footer.css";

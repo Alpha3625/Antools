@@ -1,0 +1,81 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #9A9DA0;
+  background-color: #1E252B;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+figure,
+figcaption {
+  margin: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+input,
+button {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+a,
+button,
+div[class],
+input,
+textarea,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+a:active,
+button:active {
+  background-color: transparent;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #005fcc;
+  outline-offset: 2px;
+}
+
+svg {
+  fill: rgba(255, 255, 255, 0.8);
+}
