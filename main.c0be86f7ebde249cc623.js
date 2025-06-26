@@ -9235,7 +9235,7 @@ function initMobileSlider () {
     gap: '20px',
     mediaQuery: 'min',
     breakpoints: {
-      1024: { destroy: true },
+      1025: { destroy: true },
       // 767: { padding: '25%' },
       // 570: { padding: '21%' },
       // 500: { padding: '18%' },
@@ -9243,7 +9243,7 @@ function initMobileSlider () {
       // 400: { padding: '12%' },
       // 375: { padding: '0%' },
       390: { padding: '7%' },
-      320: { padding: '0' }
+      320: { padding: '0%' }
     }
   };
 
