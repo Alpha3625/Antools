@@ -3222,6 +3222,31 @@ module.exports = function (it, msg) {
 
 /***/ }),
 
+/***/ 5124:
+/***/ (() => {
+
+const links = document.querySelectorAll('a[href^="#"]');
+
+links.forEach(link => {
+    link.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+            const offsetPosition = targetElement.getBoundingClientRect().top + window.scrollY - 100;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth',
+            });
+        }
+    });
+});
+
+/***/ }),
+
 /***/ 5144:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
@@ -9096,7 +9121,7 @@ var ___HTML_LOADER_IMPORT_10___ = (/* unused pure expression or super */ null &&
 var ___HTML_LOADER_IMPORT_11___ = (/* unused pure expression or super */ null && (/* unused asset import */ undefined));
 var ___HTML_LOADER_IMPORT_12___ = (/* unused pure expression or super */ null && (/* unused asset import */ undefined));
 // Module
-var code = (/* unused pure expression or super */ null && (`<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width,initial-scale=1"> <meta http-equiv="X-UA-Compatible" content="ie=edge"> <meta property="og:title" content="Antools"> <link rel="shortcut icon" href="${___HTML_LOADER_IMPORT_0___}"> <title>Antools</title> </head> <body> <header class="header"> <div class="container"> <div class="header__inner"> <a class="logo" href="#home"> <img src="${___HTML_LOADER_IMPORT_1___}" alt="Antools"> </a> <nav class="nav"> <ul class="nav__list"> <li class="nav__item"> <a class="nav__link" href="#home">Home</a> </li> <li class="nav__item"> <div class="nav__сategories-link nav__link"> Categories <svg class="nav__link-arrow" width="12" height="6"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-arrow-down"></use> </svg> </div> <ul class="nav__сategories"> <li class="nav__сategories-item"> <a class="nav__link" href="#design">Design</a> </li> <li class="nav__сategories-item"> <a class="nav__link" href="#development">Development</a> </li> </ul> </li> <li class="nav__item"> <a class="nav__link" href="#collections">My Collections</a> </li> <li class="nav__item"> <a class="nav__link" href="#blog">Blog</a> </li> </ul> </nav> <div class="header__buttons"> <button class="header__login" type="submit">Login</button> <button class="header__sign-up" type="submit">Sign Up</button> </div> <div class="burger-menu"> <span></span> </div> </div> </div> </header> <main> <div class="overlay"></div> <section class="home" id="home"> <div class="container"> <div class="home__inner"> <div class="home__content"> <h1 class="home__title"> Awesome tools for Designer & Developer<span>.</span> </h1> <p class="home__text"> Antool is a web collection of information on paid or free Design and Development tools </p> <form class="input-container search-container"> <div class="search-input"> <svg width="25" height="24"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-search"></use> </svg> <input type="search" name="search-input" placeholder="find more than 430 + tools..." required> </div> <button class="input-button" name="search-button" type="submit">Search</button> </form> <div class="home__icon"> <svg width="36" height="36"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-facebook"></use> </svg> <svg width="36" height="36"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-instagram"></use> </svg> <svg width="36" height="36"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-twitter"></use> </svg> </div> </div> <div class="home__bg"> <img src="${___HTML_LOADER_IMPORT_3___}" alt="Illustration"> </div> </div> </div> </section> <section class="popular-tools"> <div class="container"> <div class="popular-tools__header" id="design"> <h2 class="popular-tools__title">Most Popular Tools</h2> <p class="popular-tools__text"> Tools for the best Designers and Developers most popularly used in the world </p> </div> <div id="slider1" class="splide"> <div class="splide__track"> <ul class="splide__list"></ul> </div> </div> <a class="popular-tools__button" href="#">Load more</a> </div> </section> <section> <div class="partners"> <div class="container"> <div class="partners__inner"> <h2 class="partners__title">Trusted more than 150+ brand</h2> <ul class="partners__list"> <li class="partners__item"> <img src="${___HTML_LOADER_IMPORT_4___}" alt="Microsoft"> </li> <li class="partners__item"> <img src="${___HTML_LOADER_IMPORT_5___}" alt="Google"> </li> <li class="partners__item"> <img src="${___HTML_LOADER_IMPORT_6___}" alt="Slack"> </li> <li class="partners__item"> <img src="${___HTML_LOADER_IMPORT_7___}" alt="Wordpress"> </li> </ul> </div> </div> </div> </section> <section class="newcomer-tools" id="development"> <div class="container"> <div class="newcomer-tools__inner"> <div class="newcomer-tools__header"> <h2 class="newcomer-tools__title">Newcomer Tools</h2> <p class="newcomer-tools__text"> Wow! see the latest update of the most recommended tools from reliable designers and developers </p> <a class="newcomer-tools__button" href="#">Explore more</a> </div> <div id="slider2" class="splide"> <div class="splide__track"> <ul class="splide__list"></ul> </div> </div> </div> </div> </section> <section id="blog" class="splide"> <div class="splide__track"> <ul class="splide__list"> <li class="splide__slide"> <div class="splide__slide-inner"> <div class="splide__slide-item splide__slide-img"> <div class="person-img"> <img src="${___HTML_LOADER_IMPORT_8___}" alt="Ronald Richards"> </div> <img class="spiral" src="${___HTML_LOADER_IMPORT_9___}" alt="spiral"> <div class="personal-info"> <h3>Ronald Richards</h3> <p>Product Manager</p> </div> </div> <div class="splide__slide-item"> <div class="splide__slide-text"> <img class="quote" src="${___HTML_LOADER_IMPORT_10___}" alt="quote"> <p> Incididunt cillum do sint sint enim ullamco id deserunt mollit qui reprehenderit do. Do nulla velit labore occaecat do deserunt Lorem magna officia incididunt consectetur amet. Sunt consectetur veniam minim ex commodo sint non. Occaecat aute officia excepteur non laboris id qui ad. </p> </div> </div> </div> </li> <li class="splide__slide"> <div class="splide__slide-inner"> <div class="splide__slide-item splide__slide-img"> <div class="person-img"> <img src="${___HTML_LOADER_IMPORT_11___}" alt="Maria Clark"> </div> <img class="spiral" src="${___HTML_LOADER_IMPORT_9___}" alt="spiral"> <div class="personal-info"> <h3>Maria Clark</h3> <p>Product Manager</p> </div> </div> <div class="splide__slide-item"> <div class="splide__slide-text"> <img class="quote" src="${___HTML_LOADER_IMPORT_10___}" alt="quote"> <p> Incididunt cillum do sint sint enim ullamco id deserunt mollit qui reprehenderit do. Velit ex tempor cillum ad sint occaecat. Do nulla velit labore occaecat do deserunt Lorem magna officia incididunt consectetur amet. Sunt consectetur veniam minim ex commodo sint non. Occaecat aute officia excepteur non laboris id qui ad. </p> </div> </div> </div> </li> <li class="splide__slide"> <div class="splide__slide-inner"> <div class="splide__slide-item splide__slide-img"> <div class="person-img"> <img src="${___HTML_LOADER_IMPORT_12___}" alt="Amber Brown"> </div> <img class="spiral" src="${___HTML_LOADER_IMPORT_9___}" alt="spiral"> <div class="personal-info"> <h3>Amber Brown</h3> <p>Product Manager</p> </div> </div> <div class="splide__slide-item"> <div class="splide__slide-text"> <img class="quote" src="${___HTML_LOADER_IMPORT_10___}" alt="quote"> <p> Incididunt cillum do sint sint enim ullamco id deserunt mollit qui reprehenderit do. Velit ex tempor cillum ad sint occaecat. Do nulla velit labore occaecat do deserunt Lorem magna officia incididunt consectetur amet. Sunt consectetur veniam minim ex commodo sint non. </p> </div> </div> </div> </li> </ul> </div> </section> <section class="cooperation"> <div class="container"> <div class="cooperation__header"> <h2 class="cooperation__title">Become a contributor?</h2> <p class="cooperation__text"> Join us and get tips & tricks to become a great Designer and Developer </p> </div> <form class="input-container email-container"> <input type="email" name="email-input" placeholder="Enter your email..." required> <button class="input-button" type="submit" name="email-button">Join Us</button> </form> </div> </section> </main> <footer class="footer"> <div class="container"> <div class="footer__inner"> <div class="footer__item"> <div class="footer__logo"> <img src="${___HTML_LOADER_IMPORT_1___}" alt="Antools"> </div> <p class="copyright">Copyright 2021. Antools</p> <p class="footer__item-text"> Antool is a web collection of information on paid or free Design and Development tools </p> </div> <div class="footer__item"> <h4 class="footer__item-title">Contact Us</h4> <a class="footer__item-text" href="#">+621987463</a> <a class="footer__item-text" href="#">M Building, No.10 A</a> <a class="footer__item-text" href="#">antools@awesome.com</a> </div> <div class="footer__item"> <h4 class="footer__item-title">Categories</h4> <a class="footer__item-text" href="#design">Design</a> <a class="footer__item-text" href="#development">Development</a> </div> <div class="footer__item"> <h4 class="footer__item-title">Company Info</h4> <a class="footer__item-text" href="#">About Us</a> <a class="footer__item-text" href="#">Our Partners</a> <a class="footer__item-text" href="#">Blog</a> </div> </div> </div> </footer> </body> </html>`));
+var code = (/* unused pure expression or super */ null && (`<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width,initial-scale=1"> <meta http-equiv="X-UA-Compatible" content="ie=edge"> <meta property="og:title" content="Antools"> <link rel="shortcut icon" href="${___HTML_LOADER_IMPORT_0___}"> <title>Antools</title> </head> <body> <header class="header"> <div class="container"> <div class="header__inner"> <a class="logo" href="#home"> <img src="${___HTML_LOADER_IMPORT_1___}" alt="Antools"> </a> <nav class="nav"> <ul class="nav__list"> <li class="nav__item"> <a class="nav__link" href="#home">Home</a> </li> <li class="nav__item"> <div class="nav__сategories-link nav__link"> Categories <svg class="nav__link-arrow" width="12" height="6"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-arrow-down"></use> </svg> </div> <ul class="nav__сategories"> <li class="nav__сategories-item"> <a class="nav__link" href="#design">Design</a> </li> <li class="nav__сategories-item"> <a class="nav__link" href="#development">Development</a> </li> </ul> </li> <li class="nav__item"> <a class="nav__link" href="#collections">My Collections</a> </li> <li class="nav__item"> <a class="nav__link" href="#blog">Blog</a> </li> </ul> </nav> <div class="header__buttons"> <button class="header__login" type="submit">Login</button> <button class="header__sign-up" type="submit">Sign Up</button> </div> <div class="burger-menu"> <span></span> </div> </div> </div> </header> <main> <div class="overlay"></div> <section class="home" id="home"> <div class="container"> <div class="home__inner"> <div class="home__content"> <h1 class="home__title"> Awesome tools for Designer & Developer<span>.</span> </h1> <p class="home__text"> Antool is a web collection of information on paid or free Design and Development tools </p> <form class="input-container search-container"> <div class="search-input"> <svg width="25" height="24"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-search"></use> </svg> <input type="search" name="search-input" placeholder="find more than 430 + tools..." required> </div> <button class="input-button" name="search-button" type="submit">Search</button> </form> <div class="home__icon"> <svg width="36" height="36"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-facebook"></use> </svg> <svg width="36" height="36"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-instagram"></use> </svg> <svg width="36" height="36"> <use xlink:href="${___HTML_LOADER_IMPORT_2___}#icon-twitter"></use> </svg> </div> </div> <div class="home__bg"> <img src="${___HTML_LOADER_IMPORT_3___}" alt="Illustration"> </div> </div> </div> </section> <section class="popular-tools"> <div class="container"> <div class="popular-tools__header" id="design"> <h2 class="popular-tools__title">Most Popular Tools</h2> <p class="popular-tools__text"> Tools for the best Designers and Developers most popularly used in the world </p> </div> <div id="carousel-tools-1" class="splide"> <div class="splide__track"> <ul class="splide__list"></ul> </div> </div> <a class="popular-tools__button" href="#">Load more</a> </div> </section> <section id="partners"> <div class="container"> <div class="partners"> <h2 class="partners__title">Trusted more than 150+ brand</h2> <ul class="partners__list"> <li class="partners__item"> <img src="${___HTML_LOADER_IMPORT_4___}" alt="Microsoft"> </li> <li class="partners__item"> <img src="${___HTML_LOADER_IMPORT_5___}" alt="Google"> </li> <li class="partners__item"> <img src="${___HTML_LOADER_IMPORT_6___}" alt="Slack"> </li> <li class="partners__item"> <img src="${___HTML_LOADER_IMPORT_7___}" alt="Wordpress"> </li> </ul> </div> </div> </section> <section class="newcomer-tools" id="development"> <div class="container"> <div class="newcomer-tools__inner"> <div class="newcomer-tools__header"> <h2 class="newcomer-tools__title">Newcomer Tools</h2> <p class="newcomer-tools__text"> Wow! see the latest update of the most recommended tools from reliable designers and developers </p> <a class="newcomer-tools__button" href="#">Explore more</a> </div> <div id="carousel-tools-2" class="splide"> <div class="splide__track"> <ul class="splide__list"></ul> </div> </div> </div> </div> </section> <section id="blog" class="splide"> <div class="splide__track"> <ul class="splide__list"> <li class="splide__slide"> <div class="splide__slide-inner"> <div class="splide__slide-item splide__slide-img"> <div class="person-img"> <img src="${___HTML_LOADER_IMPORT_8___}" alt="Ronald Richards"> </div> <img class="spiral" src="${___HTML_LOADER_IMPORT_9___}" alt="spiral"> <div class="personal-info"> <h3>Ronald Richards</h3> <p>Product Manager</p> </div> </div> <div class="splide__slide-item"> <div class="splide__slide-text"> <img class="quote" src="${___HTML_LOADER_IMPORT_10___}" alt="quote"> <p> Incididunt cillum do sint sint enim ullamco id deserunt mollit qui reprehenderit do. Do nulla velit labore occaecat do deserunt Lorem magna officia incididunt consectetur amet. Sunt consectetur veniam minim ex commodo sint non. Occaecat aute officia excepteur non laboris id qui ad. </p> </div> </div> </div> </li> <li class="splide__slide"> <div class="splide__slide-inner"> <div class="splide__slide-item splide__slide-img"> <div class="person-img"> <img src="${___HTML_LOADER_IMPORT_11___}" alt="Maria Clark"> </div> <img class="spiral" src="${___HTML_LOADER_IMPORT_9___}" alt="spiral"> <div class="personal-info"> <h3>Maria Clark</h3> <p>Product Manager</p> </div> </div> <div class="splide__slide-item"> <div class="splide__slide-text"> <img class="quote" src="${___HTML_LOADER_IMPORT_10___}" alt="quote"> <p> Incididunt cillum do sint sint enim ullamco id deserunt mollit qui reprehenderit do. Velit ex tempor cillum ad sint occaecat. Do nulla velit labore occaecat do deserunt Lorem magna officia incididunt consectetur amet. Sunt consectetur veniam minim ex commodo sint non. Occaecat aute officia excepteur non laboris id qui ad. </p> </div> </div> </div> </li> <li class="splide__slide"> <div class="splide__slide-inner"> <div class="splide__slide-item splide__slide-img"> <div class="person-img"> <img src="${___HTML_LOADER_IMPORT_12___}" alt="Amber Brown"> </div> <img class="spiral" src="${___HTML_LOADER_IMPORT_9___}" alt="spiral"> <div class="personal-info"> <h3>Amber Brown</h3> <p>Product Manager</p> </div> </div> <div class="splide__slide-item"> <div class="splide__slide-text"> <img class="quote" src="${___HTML_LOADER_IMPORT_10___}" alt="quote"> <p> Incididunt cillum do sint sint enim ullamco id deserunt mollit qui reprehenderit do. Velit ex tempor cillum ad sint occaecat. Do nulla velit labore occaecat do deserunt Lorem magna officia incididunt consectetur amet. Sunt consectetur veniam minim ex commodo sint non. </p> </div> </div> </div> </li> </ul> </div> </section> <section class="cooperation"> <div class="container"> <div class="cooperation__header"> <h2 class="cooperation__title">Become a contributor?</h2> <p class="cooperation__text"> Join us and get tips & tricks to become a great Designer and Developer </p> </div> <form class="input-container email-container"> <input type="email" name="email-input" placeholder="Enter your email..." required> <button class="input-button" type="submit" name="email-button">Join Us</button> </form> </div> </section> </main> <footer class="footer"> <div class="container"> <div class="footer__inner"> <div class="footer__item"> <div class="footer__logo"> <img src="${___HTML_LOADER_IMPORT_1___}" alt="Antools"> </div> <p class="copyright">Copyright 2021. Antools</p> <p class="footer__item-text"> Antool is a web collection of information on paid or free Design and Development tools </p> </div> <div class="footer__item"> <h4 class="footer__item-title">Contact Us</h4> <a class="footer__item-text" href="tel:+621987463">+621987463</a> <a class="footer__item-text" href="https://maps.app.goo.gl/ts5AevnM3FGtbpXV6">M Building, No.10 A</a> <a class="footer__item-text" href="mailto:antools@awesome.com">antools@awesome.com</a> </div> <div class="footer__item"> <h4 class="footer__item-title">Categories</h4> <a class="footer__item-text" href="#design">Design</a> <a class="footer__item-text" href="#development">Development</a> </div> <div class="footer__item"> <h4 class="footer__item-title">Company Info</h4> <a class="footer__item-text" href="#home">About Us</a> <a class="footer__item-text" href="#partners">Our Partners</a> <a class="footer__item-text" href="#blog">Blog</a> </div> </div> </div> </footer> </body> </html>`));
 // Exports
 /* harmony default export */ const index = ((/* unused pure expression or super */ null && (code)));
 ;// ./src/js/scripts/header.js
@@ -9108,13 +9133,18 @@ const initHeader = () => {
     });
 };
 ;// ./src/js/scripts/checkWindowSize.js
-function initCheckWindowSize(element) {
-    window.addEventListener('resize', (e) => {
-        if (e.target.innerWidth > 1024) {
-            element.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-    });
+function initCheckWindowSize(...elements) {
+    const handleResize = () => {
+        if (window.innerWidth > 1024) {
+            elements.forEach(el => el.classList.remove('active'));
+            document.body.style.overflow = '';
+        }
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+    return () => window.removeEventListener('resize', handleResize);
 }
 
 /* harmony default export */ const checkWindowSize = (initCheckWindowSize);
@@ -9122,97 +9152,73 @@ function initCheckWindowSize(element) {
 ;// ./src/js/scripts/burgerMenu.js
 
 
-function mobileMenuToggle(burgerMenu, nav, overlay) {
-    [burgerMenu, nav, overlay].forEach(item => item.classList.toggle('active'));
+const nav = document.querySelector('.nav');
+const overlay = document.querySelector('.overlay');
+const burgerMenu = document.querySelector('.burger-menu');
+const dropList = document.querySelector('.nav__сategories-link');
 
-    if (burgerMenu.classList.contains('active')) {
-        document.body.style.overflow = 'hidden';
-    } else {
-        document.body.style.overflow = '';
-    }
+function mobileMenuToggle(burgerMenu, nav, dropList, overlay) {
+    const isActive = burgerMenu.classList.toggle('active');
+    nav.classList.toggle('active');
+    dropList.classList.remove('active');
+    overlay.classList.toggle('active');
+    document.body.style.overflow = isActive ? 'hidden' : '';
 }
-
-function navDropList () {
-    const dropList = document.querySelector('.nav__сategories-link');
-    
-    if (dropList.classList.contains('active')) {
-        dropList.classList.remove('active');
-    }
-}
-
-navDropList();
 
 const initBurgerMenu = () => {
-    const burgerMenu = document.querySelector('.burger-menu');
-    const nav = document.querySelector('.nav');
-    const overlay = document.querySelector('.overlay');
+    if (!burgerMenu || !nav || !overlay) return;
 
-    burgerMenu.addEventListener('click', () => {
-        mobileMenuToggle(burgerMenu, nav, overlay);
-    });
+    burgerMenu.addEventListener('click', () => {
+        mobileMenuToggle(burgerMenu, nav, dropList, overlay);
+    });
 
-    checkWindowSize(burgerMenu);
-    checkWindowSize(nav);
-    checkWindowSize(overlay);
+    nav.addEventListener('click', (e) => {
+        if (burgerMenu.classList.contains('active') && e.target.tagName === 'A') {
+            mobileMenuToggle(burgerMenu, nav, dropList, overlay);
+        }
+    });
 
-
-    nav.addEventListener("click", (e) => {
-        if (burgerMenu.classList.contains('active') && e.target.tagName === 'A') {
-            mobileMenuToggle(burgerMenu, nav, overlay)
-        }
-    });
+    checkWindowSize(burgerMenu, nav, overlay, dropList);
 };
-
-
-    // links.forEach(link => {
-    //     link.addEventListener('click', function(event) {
-    //         event.preventDefault(); // Отменяем переход по ссылке
-
-    //         const targetId = this.getAttribute('href');
-    //         const targetElement = document.querySelector(targetId);
-
-    //         if (targetElement) {
-    //             const offsetPosition = targetElement.getBoundingClientRect().top + window.scrollY - 70;
-
-    //             window.scrollTo({
-    //                 top: offsetPosition,
-    //                 behavior: 'smooth',
-    //             });
-    //         }
-    //     });
-    // });
 ;// ./src/js/scripts/dropList.js
-
 const initDropList = () => {
     const dropList = document.querySelector('.nav__сategories-link');
     const header = document.querySelector('.header');
     const nav = document.querySelector('.nav');
+
     const updateHeaderStyle = () => {
-        if (header.classList.contains('active') && !nav.classList.contains('active') && dropList.classList.contains('active')) {
+        if (
+            header.classList.contains('active') && 
+            !nav.classList.contains('active') && 
+            dropList.classList.contains('active')
+        ) {
             header.style.paddingBottom = '70px';
         } else {
             header.style.paddingBottom = '';
         }
-        // initCheckWindowSize(header);
     };
+
     dropList.addEventListener('click', () => {
         dropList.classList.toggle('active');
         updateHeaderStyle();
     });
+
     const observer = new MutationObserver(updateHeaderStyle);
 
     observer.observe(header, {
         attributes: true,
         attributeFilter: ['class']
     });
+    
     observer.observe(dropList, {
         attributes: true,
         attributeFilter: ['class']
     });
 
     updateHeaderStyle();
-    // initCheckWindowSize(header);
 };
+// EXTERNAL MODULE: ./src/js/scripts/links.js
+var links = __webpack_require__(5124);
 // EXTERNAL MODULE: ./node_modules/@splidejs/splide/dist/js/splide.min.js
 var splide_min = __webpack_require__(9865);
 var splide_min_default = /*#__PURE__*/__webpack_require__.n(splide_min);
@@ -9236,25 +9242,57 @@ function initMobileSlider () {
     mediaQuery: 'min',
     breakpoints: {
       1025: { destroy: true },
-      // 767: { padding: '25%' },
-      // 570: { padding: '21%' },
-      // 500: { padding: '18%' },
-      // 450: { padding: '14%' },
-      // 400: { padding: '12%' },
-      // 375: { padding: '0%' },
-      390: { padding: '7%' },
-      320: { padding: '0%' }
     }
   };
 
   const carouselBlogOptions = {...baseOptions};
 
-  new (splide_min_default())("#slider1", carouselToolsOptions).mount();
-  new (splide_min_default())("#slider2", carouselToolsOptions).mount();
+  new (splide_min_default())("#carousel-tools-1", carouselToolsOptions).mount();
+  new (splide_min_default())("#carousel-tools-2", carouselToolsOptions).mount();
   new (splide_min_default())('#blog', carouselBlogOptions).mount();
 }
 ;// ./src/assets/sprite.svg
 const sprite_namespaceObject = __webpack_require__.p + "sprite.svg";
+;// ./src/js/scripts/card.js
+
+
+function createCard(tool) {
+    const card = `
+        <li class="splide__slide">
+            <div class="card">
+                <div class="card__wrapper">
+                    <div class="card__header">
+                        <h3>
+                            <img class="card__logo" src="${tool.logo}" width="60" height="60" alt="${tool.title}">
+                            ${tool.title}
+                        </h3>
+                        <p>${tool.price}</p>
+                    </div>
+                    <div class="card__content">
+                        ${tool.description}
+                    </div>
+                    <div class="card__footer">
+                        <div class="card__icons">
+                            <div class="card__icon">
+                                <svg width="28" height="28">
+                                    <use xlink:href="${sprite_namespaceObject}#icon-heart" />
+                                </svg>
+                            </div>
+                            <div class="card__icon">
+                                <svg width="30" height="30">
+                                    <use xlink:href="${sprite_namespaceObject}#icon-folder" />
+                                </svg>
+                            </div>
+                        </div>
+                        <button class="card__button button">Visit</button>
+                    </div>
+                </div>
+            </div>
+        </li>
+    `;
+
+    return card;
+}
 ;// ./src/assets/icons/figma.svg
 const figma_namespaceObject = __webpack_require__.p + "assets/figma.svg";
 ;// ./src/assets/icons/sketch.svg
@@ -9357,84 +9395,22 @@ const newcomerTools = [
 
 
 
-const carouselTools_1 = document.getElementById('slider1');
-const carouselTools_1__list = carouselTools_1.querySelector('.splide__list');
+const carouselTools_1 = document.getElementById('carousel-tools-1')?.querySelector('.splide__list');
+const carouselTools_2 = document.getElementById('carousel-tools-2')?.querySelector('.splide__list');
 
-mostPopularTools.forEach(tool => {
-    carouselTools_1__list.insertAdjacentHTML('beforeend', `
-    <li class="splide__slide">
-        <div class="card">
-            <div class="card__wrapper">
-                <div class="card__header">
-                    <h3>
-                        <img class="card__logo" src="${tool.logo}" width="60px" height="60px" alt="${tool.title}">
-                        ${tool.title}
-                    </h3>
-                    <p>${tool.price}</p>
-                </div>
-                <div class="card__content">
-                    ${tool.description}
-                </div>
-                <div class="card__footer">
-                    <div class="card__icons">
-                        <div class="card__icon">
-                            <svg width="28" height="28">
-                                <use xlink:href="${sprite_namespaceObject}#icon-heart" />
-                            </svg>
-                        </div>
-                        <div class="card__icon">
-                            <svg width="30" height="30">
-                                <use xlink:href="${sprite_namespaceObject}#icon-folder" />
-                            </svg>
-                        </div>
-                    </div>
-                    <button class="card__button button">Visit</button>
-                </div>
-            </div>
-        </div>
-    </li>`);
-});
+if (carouselTools_1) {
+    mostPopularTools.forEach(tool => {
+        carouselTools_1.insertAdjacentHTML('beforeend', createCard(tool));
+    });
+}
 
-const carouselTools_2 = document.getElementById('slider2');
-const carouselTools_2__list = carouselTools_2.querySelector('.splide__list');
-
-newcomerTools.forEach(tool => {
-    carouselTools_2__list.insertAdjacentHTML('beforeend', `
-        <li class="splide__slide">
-            <div class="newcomer-tools__card card">
-                <div class="card__wrapper">
-                    <div class="card__header">
-                        <h3>
-                            <img class="card__logo" src=${tool.logo} width="60px"
-                                height="60px" alt=${tool.title}>
-                            Zeplin
-                        </h3>
-                        <p>${tool.price}</p>
-                    </div>
-                    <div class="card__content">
-                       ${tool.description}
-                    </div>
-                    <div class="card__footer">
-                        <div class="card__icons">
-                            <div class="card__icon">
-                                <svg width="28" height="28">
-                                    <use xlink:href="${sprite_namespaceObject}#icon-heart" />
-                                </svg>
-                            </div>
-                            <div class="card__icon">
-                                <svg width="30" height="30">
-                                    <use xlink:href="${sprite_namespaceObject}#icon-folder" />
-                                </svg>
-                            </div>
-                        </div>
-                        <a class="card__button" href="#">Visit</a>
-                    </div>
-                </div>
-            </div>
-        </li>
-    `);
-});
+if (carouselTools_2) {
+    newcomerTools.forEach(tool => {
+        carouselTools_2.insertAdjacentHTML('beforeend', createCard(tool));
+    });
+}
 ;// ./src/js/index.js
+
 
 
 
