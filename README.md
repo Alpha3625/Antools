@@ -30,8 +30,6 @@
 <div align="center">
     <img height="350px" src="https://github.com/user-attachments/assets/2c9db8c4-f619-4355-abe4-39d4d4c7f892"/>
     <img height="350px" src="https://github.com/user-attachments/assets/67dc05bc-6cc5-46f7-9253-ba9f5fb893f3"/>
-</div>
-<div align="center">
     <img height="350px" src="https://github.com/user-attachments/assets/b0082f18-101b-4263-a07d-a6da1fd2efc0"/>
     <img height="350px" src="https://github.com/user-attachments/assets/c1e1eb30-0eb5-4c82-9d91-5aef8ca8932f"/>
 </div>
