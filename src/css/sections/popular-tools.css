@@ -58,6 +58,11 @@
   .popular-tools>.container {
     padding: 0;
   }
+
+  .popular-tools__button:active {
+    color: #FFF;
+    background-color: #FF6E30;
+  }
 }
 
 @media screen and (max-width: 767px) {
