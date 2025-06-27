@@ -33,17 +33,20 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   cursor: pointer;
-}
-
-.popular-tools__button:hover {
-  color: #fff;
-  background-color: #FF6E30;
+  transition: all 0.3s;
 }
 
 @media screen and (max-width: 1263px) {
   .popular-tools .card__wrapper {
     max-width: 288px;
     padding: 22px 10px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .popular-tools__button:hover {
+    color: #FFF;
+    background-color: #FF6E30;
   }
 }
 
