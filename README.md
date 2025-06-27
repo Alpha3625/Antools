@@ -14,8 +14,8 @@
 
 ### 💻 Desktop
 <div align="center">
-    <img width="500px" height="270px" src="https://github.com/user-attachments/assets/0761febb-4bbd-47a9-82f3-1df8b461a9a6"/>
-    <img width="500px" height="270px" src="https://github.com/user-attachments/assets/4a46aaec-9431-41e2-8a3c-3dc6434bd48e"/>
+    <img width="500px" src="https://github.com/user-attachments/assets/0761febb-4bbd-47a9-82f3-1df8b461a9a6"/>
+    <img width="500px" src="https://github.com/user-attachments/assets/4a46aaec-9431-41e2-8a3c-3dc6434bd48e"/>
 </div>
 <div align="center">
     <img width="500px" src="https://github.com/user-attachments/assets/d97ba414-8605-4e31-9098-54101654a4ac" />
