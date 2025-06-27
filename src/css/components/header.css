@@ -18,15 +18,6 @@
   align-items: center;
 }
 
-/* .header.active .nav__category {
-  position: static;
-} */
-/* 
-
-.header.active {
-  padding-bottom: 70px;
-} */
-
 .header__buttons {
   display: flex;
   gap: 0 47px;
@@ -54,15 +45,13 @@
 }
 
 @media screen and (max-width: 1024px) {
+  .header {
+    padding: 10px 0;
+  }
+
   .header__buttons {
     display: none;
     margin-top: 30px;
     flex-direction: column;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .header {
-    padding: 10px 0;
   }
 }

@@ -13,7 +13,7 @@
   border-top: 2px solid rgba(76, 47, 51, 1);
   border-left: 2px solid rgba(76, 47, 51, 1);
   border-top-left-radius: 25px;
-  height: 160px;
+  height: 170px;
   width: 160px;
   position: absolute;
   top: -2px;
@@ -39,8 +39,12 @@
 
 @media screen and (max-width: 1024px) {
   .partners {
-    background: linear-gradient(315deg, rgb(33, 40, 47) 0%, rgb(33, 40, 47) 80%, rgba(76, 47, 51, 1) 100%);
-    padding: 30px 0;
+    padding: 30px 10px;
+  }
+
+  .partners::after {
+    height: 120px;
+    width: 120px;
   }
 
   .partners__title {
@@ -53,10 +57,9 @@
 }
 
 @media screen and (max-width: 650px) {
-  .partners::after {
-    height: 120px;
-    width: 120px;
-}
+  .partners {
+    background: linear-gradient(315deg, rgb(33, 40, 47) 0%, rgb(33, 40, 47) 80%, rgba(76, 47, 51, 1) 100%);
+  }
 
   .partners__title {
     font-size: 18px;

@@ -26,7 +26,7 @@
 
 .card__header {
     position: relative;
-    padding-left: 85px;
+    padding-left: 80px;
     margin-bottom: 40px;
 }
 
@@ -37,19 +37,21 @@
     z-index: 1;
 }
 
-.card__header>h4 {
-    font-size: 24px;
-    font-weight: 100;
+.card__header>h3 {
+    font-size: 18px;
+    font-weight: 500;
     color: rgba(255, 255, 255, 0.8);
 }
 
 .card__header>p {
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 100;
     color: #FFA537;
 }
 
 .card__content {
+    font-weight: 400;
+    font-size: 15px;
     margin-bottom: 30px;
 }
 
@@ -91,7 +93,7 @@
     transition: all 0.3s;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
     .card:hover>.card__wrapper {
         background: linear-gradient(45deg, rgba(40, 48, 54, 0.6) 0%, rgba(40, 48, 54, 0.6) 80%, rgba(255, 110, 48, 0.288) 100%);
         box-shadow: 0 5px 5px 0 rgb(0, 0, 0, 0.50);

@@ -40,10 +40,12 @@
   background-color: #FF6E30;
 }
 
-  /* .popular-tools  .card__wrapper {
-        max-width: 288px;
-        padding: 22px 10px;
-    } */
+@media screen and (max-width: 1263px) {
+  .popular-tools .card__wrapper {
+    max-width: 288px;
+    padding: 22px 10px;
+  }
+}
 
 @media screen and (max-width: 1024px) {
   .popular-tools {

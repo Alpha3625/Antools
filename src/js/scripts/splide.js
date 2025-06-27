@@ -17,20 +17,12 @@ export default function initMobileSlider () {
     mediaQuery: 'min',
     breakpoints: {
       1025: { destroy: true },
-      // 767: { padding: '25%' },
-      // 570: { padding: '21%' },
-      // 500: { padding: '18%' },
-      // 450: { padding: '14%' },
-      // 400: { padding: '12%' },
-      // 375: { padding: '0%' },
-      390: { padding: '7%' },
-      320: { padding: '0%' }
     }
   };
 
   const carouselBlogOptions = {...baseOptions};
 
-  new Splide("#slider1", carouselToolsOptions).mount();
-  new Splide("#slider2", carouselToolsOptions).mount();
+  new Splide("#carousel-tools-1", carouselToolsOptions).mount();
+  new Splide("#carousel-tools-2", carouselToolsOptions).mount();
   new Splide('#blog', carouselBlogOptions).mount();
 }

@@ -36,7 +36,7 @@
     transition: all 0.3s;
 }
 
-.newcomer-tools__card .card__wrapper {
+.newcomer-tools .card__wrapper {
     max-width: 288px;
     padding: 28px 22px;
 }
@@ -110,7 +110,7 @@
         font-size: 15px;
     }
 
-    .newcomer-tools__card .card__wrapper {
+    .newcomer-tools .card__wrapper {
         padding: 22px 10px;
     }
 }

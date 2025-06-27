@@ -1,45 +1,38 @@
-#slider1 {
+#carousel-tools-1 {
     margin-bottom: 100px;
 }
 
-#slider1 .splide__track {
+#carousel-tools-1 .splide__track {
     width: 100%;
     overflow: visible;
     justify-content: center;
 }
 
-#slider1 .splide__list {
+#carousel-tools-1 .splide__list {
     display: flex;
-    flex-wrap: wrap;
-    /* justify-content: space-between; */
     justify-content: space-around;
+    flex-wrap: wrap;
     gap: 100px 24px;
 }
 
-#slider1 .splide__slide {
-    margin-right: 10px !important;
+#carousel-tools-1 .splide__slide {
+    margin-right: 0 !important;
     max-width: 392px;
     padding: 0;
 }
 
 @media screen and (max-width: 1024px) {
-    #slider1 .splide__track {
+    #carousel-tools-1 .splide__track {
         overflow: hidden;
         padding: 20px 0;
     }
 
-    #slider1 .splide__list {
+    #carousel-tools-1 .splide__list {
         flex-wrap: nowrap;
         gap: 16px;
     }
 
-    #slider1 .splide__slide {
+    #carousel-tools-1 .splide__slide {
         max-width: 288px;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    #slider1 .card__wrapper {
-        margin: 0 auto;
     }
 }

@@ -2,9 +2,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.nav {
     transition: left 0.4s linear;
 }
 
