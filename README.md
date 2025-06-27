@@ -18,12 +18,13 @@
     <img width="400px" height="270px" src="https://github.com/user-attachments/assets/4a46aaec-9431-41e2-8a3c-3dc6434bd48e"/>
 </div>
 <div align="center">
-    <img width="400px" height="270px" src=""/>
+    <img width="400px" src="https://github.com/user-attachments/assets/d97ba414-8605-4e31-9098-54101654a4ac" />
+    <img width="400px" height="270px" src="https://github.com/user-attachments/assets/14dce5c7-6ac5-40f8-a8de-775ac93741de"/>
 </div>
 
 ### 📱 Mobile
 <div align="center">
-    <img height="350px" src=""/>
+    <img height="350px" src="https://github.com/user-attachments/assets/2c9db8c4-f619-4355-abe4-39d4d4c7f892"/>
     <img height="350px" src=""/>
 </div>
 
